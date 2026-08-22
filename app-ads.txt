@@ -1,0 +1,4 @@
+# app-ads.txt — IAB Tech Lab app-ads.txt v1.0
+# VISM STUDIO의 앱에서 광고를 판매할 권한이 있는 사업자 목록입니다.
+# 이 파일은 https://dsm0829.github.io/app-ads.txt 에서 제공됩니다.
+google.com, pub-2202664688947556, DIRECT, f08c47fec0942fa0
