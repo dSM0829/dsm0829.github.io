@@ -23,10 +23,8 @@
       'nav.apps': '앱', 'nav.support': '지원', 'nav.privacy': '개인정보',
       'hero.eyebrow': 'iOS · Android 앱 스튜디오',
       'hero.h1': '작은 유틸리티 앱을, 정직하게 만듭니다.',
-      'hero.lede': '혼자 만드는 스튜디오입니다. 주사위, 환율, 클립보드, 성경, 사진 정리 — 한 가지 일을 제대로 하는 앱을 iPhone과 Android로 내놓습니다.',
       'hero.cta': '앱 보기', 'hero.cta2': '문의하기',
       'facts.apps': '앱', 'facts.live': '출시', 'facts.platforms': '플랫폼', 'facts.dev': '개발자', 'facts.since': '시작', 'facts.contact': '문의',
-      'facts.dev.sub': 'App Store 판매자명 YOU SEUNGMIN',
       'apps.h': '앱', 'apps.sub': '스토어에서 바로 받을 수 있는 앱과, 심사·준비 중인 앱입니다.',
       'apps.live': '출시된 앱', 'apps.soon': '심사 중 · 준비 중',
       'support.h': '도움이 필요하신가요?',
@@ -75,10 +73,8 @@
       'nav.apps': 'Apps', 'nav.support': 'Support', 'nav.privacy': 'Privacy',
       'hero.eyebrow': 'iOS · Android app studio',
       'hero.h1': 'Small utility apps, made honestly.',
-      'hero.lede': 'A one-person studio. Dice, exchange rates, clipboard, Bible, photo cleanup — apps that do one job properly, for iPhone and Android.',
       'hero.cta': 'See the apps', 'hero.cta2': 'Get in touch',
       'facts.apps': 'Apps', 'facts.live': 'Available', 'facts.platforms': 'Platforms', 'facts.dev': 'Developer', 'facts.since': 'Since', 'facts.contact': 'Contact',
-      'facts.dev.sub': 'App Store seller: YOU SEUNGMIN',
       'apps.h': 'Apps', 'apps.sub': 'What you can install today, and what is in review or on the way.',
       'apps.live': 'Available now', 'apps.soon': 'In review · coming soon',
       'support.h': 'Need help?',
@@ -207,7 +203,6 @@
       '<div class="app-body">' +
         '<div class="app-head"><h3 class="app-name">' + esc(L(app.name)) + '</h3><span class="app-cat">' + esc(L(app.category)) + '</span></div>' +
         '<p class="app-tag">' + esc(L(app.tagline)) + '</p>' +
-        (app.facts ? '<p class="app-facts">' + esc(L(app.facts)) + '</p>' : '') +
         '<div class="stores">' + storeBtn('ios', p.ios) + storeBtn('android', p.android) + '</div>' +
         '<div class="app-links">' + linkRow(app) + '</div>' +
       '</div></article>';
@@ -231,7 +226,7 @@
       [t('facts.apps'), String(APPS.length)],
       [t('facts.live'), String(live)],
       [t('facts.platforms'), 'iOS · Android'],
-      [t('facts.dev'), 'VISM STUDIO<small>' + esc(t('facts.dev.sub')) + '</small>'],
+      [t('facts.dev'), 'VISM STUDIO'],
       [t('facts.since'), '2026'],
       [t('facts.contact'), '<a href="mailto:' + SITE.email + '">' + SITE.email + '</a>']
     ];

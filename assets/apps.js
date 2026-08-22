@@ -23,7 +23,6 @@ window.VISM_APPS = [
       ko: 'AI가 12개 통화쌍을 하루 4번 분석해 환전하기 좋은 때를 알려줍니다. 타이밍 점수, 목표 환율 알림, 기술 지표 4종.',
       en: 'AI analyzes 12 currency pairs four times a day to find the best time to exchange. Timing score, target-rate alerts, four technical indicators.'
     },
-    facts: { ko: '무료 · 광고 포함', en: 'Free · contains ads' },
     icon: '/assets/icons/fxai.png',
     platforms: {
       ios:     { status: 'live', url: 'https://apps.apple.com/app/id6761619382' },
@@ -44,7 +43,6 @@ window.VISM_APPS = [
       ko: '복사한 것을 잃어버리지 않게. 클립보드를 자동으로 저장하고 AI가 링크·전화번호·코드·주소를 알아서 정리합니다.',
       en: 'Stop losing what you copy. Auto-saves your clipboard and uses AI to keep URLs, numbers, snippets and addresses organized.'
     },
-    facts: { ko: '무료 + 유료 플랜', en: 'Free, with paid plans' },
     icon: '/assets/icons/clipstash.png',
     platforms: {
       ios: { status: 'live', url: 'https://apps.apple.com/app/id6760615594' }
@@ -64,7 +62,6 @@ window.VISM_APPS = [
       ko: '난수가 아니라 진짜 물리. 스와이프로 던지면 주사위가 포물선을 그리며 구르다 멈춥니다. D4–D20, 스킨 8종, 계정 없음.',
       en: 'Real physics, not a random number generator. Swipe to throw and watch the dice tumble and settle. D4–D20, eight skins, no account.'
     },
-    facts: { ko: '광고 · Pro 일회 결제 · 계정 없음', en: 'Ads · one-time Pro · no account' },
     icon: '/assets/icons/diceroll.png',
     platforms: {
       ios:     { status: 'review', url: 'https://apps.apple.com/app/id6803302729' },
@@ -84,7 +81,6 @@ window.VISM_APPS = [
       ko: '사주로 보는 오늘의 운세와 이달의 좋은 날, 약속 날짜 운세, 친구 궁합, 만세력까지 매일 받아 봅니다.',
       en: 'Daily fortune from your Saju, auspicious days this month, appointment-date readings, friend compatibility and a manseryeok calendar.'
     },
-    facts: { ko: '광고 · 인앱 결제', en: 'Ads · in-app purchases' },
     icon: '/assets/icons/dayluck.png',
     platforms: {
       android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.dayluck.app' }
@@ -103,7 +99,6 @@ window.VISM_APPS = [
       ko: '변환, 자르기, 믹스, 압축 — 폰에서 바로 쓰는 무료 오디오·영상 도구 모음.',
       en: 'Free audio & video tools: convert, trim, mix and compress right on your phone.'
     },
-    facts: { ko: '무료 · 광고 포함', en: 'Free · contains ads' },
     icon: '/assets/icons/creatormix.png',
     platforms: {
       ios:     { status: 'review', url: 'https://apps.apple.com/app/id6799359766' },
@@ -123,7 +118,6 @@ window.VISM_APPS = [
       ko: '사진을 한 장도 지우지 않고 저장공간을 확보합니다. 라이브 포토의 숨은 영상만 떼어내고 사진은 그대로 — 같은 해상도, 같은 날짜, 같은 앨범.',
       en: 'Free up iPhone storage without deleting a single photo. Strips only the hidden video from Live Photos — same resolution, same date, same albums.'
     },
-    facts: { ko: '기본 무료 · Pro 일회 결제 · 서버 없음', en: 'Free · one-time Pro · no server' },
     icon: '/assets/icons/keepmemory.png',
     platforms: {
       ios:     { status: 'review', url: 'https://apps.apple.com/app/id6803499711' },
@@ -144,7 +138,6 @@ window.VISM_APPS = [
       ko: '신호가 없어도 읽는 성경. 번역본 전체를 내려받아 오프라인으로 읽고, 하이라이트·메모·책갈피를 남깁니다.',
       en: 'Read Scripture with no signal. Download full Bibles, highlight verses, and keep notes and bookmarks — all offline.'
     },
-    facts: { ko: '광고 · 분석 없음 · 계정 없이 사용', en: 'No ads, no analytics · no account needed' },
     icon: '/assets/icons/codexbible.png',
     platforms: {
       ios:     { status: 'soon', url: 'https://apps.apple.com/app/id6804084716' },
