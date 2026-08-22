@@ -1,14 +1,158 @@
 <!doctype html>
+<html lang="ko">
+<head>
 <meta charset="utf-8">
-<title>VISM STUDIO</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-         max-width: 34rem; margin: 4rem auto; padding: 0 1.25rem; color: #222; }
-  h1 { font-size: 1.4rem; margin-bottom: .25rem; }
-  p { color: #555; }
-  a { color: #0b5fff; }
-</style>
-<h1>VISM STUDIO</h1>
-<p>iOS와 Android 앱을 만듭니다.</p>
-<p><a href="/diceroll-privacy/">DiceRoll 개인정보처리방침</a></p>
+<title data-i18n="title.home">VISM STUDIO</title>
+<meta name="description" content="VISM STUDIO — iOS와 Android 유틸리티 앱을 만드는 1인 스튜디오. DiceRoll, FX AI, ClipStash, 데이럭, CreatorMix Digital, Keepmemory, Codex Bible. Small utility apps for iPhone and Android, made by a one-person studio.">
+<link rel="canonical" href="https://dsm0829.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VISM STUDIO">
+<meta property="og:title" content="VISM STUDIO">
+<meta property="og:description" content="Small utility apps for iPhone and Android — DiceRoll, FX AI, ClipStash, DayLuck, CreatorMix, Keepmemory, Codex Bible.">
+<meta property="og:url" content="https://dsm0829.github.io/">
+<meta property="og:image" content="https://dsm0829.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F4F5F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1016" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "VISM STUDIO",
+  "url": "https://dsm0829.github.io/",
+  "logo": "https://dsm0829.github.io/assets/og.png",
+  "email": "tmdals999@gmail.com",
+  "sameAs": [
+    "https://play.google.com/store/apps/developer?id=VISM+STUDIO",
+    "https://apps.apple.com/developer/id1884590037",
+    "https://github.com/dSM0829"
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="a11y.skip">본문으로 건너뛰기</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="VISM STUDIO">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" style="fill:var(--accent)"/><path d="M8.5 10.5 16 23l7.5-12.5" fill="none" style="stroke:var(--accent-ink)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <b>VISM STUDIO</b>
+    </a>
+    <nav class="nav" data-i18n-attr="aria-label:a11y.nav" aria-label="주 메뉴">
+      <a href="/#apps" data-i18n="nav.apps">앱</a>
+      <a href="/support/" data-i18n="nav.support">지원</a>
+      <a href="/privacy/" data-i18n="nav.privacy">개인정보</a>
+    </nav>
+    <div class="lang" role="group" data-i18n-attr="aria-label:a11y.lang" aria-label="언어 선택">
+      <button type="button" data-lang-btn="ko" aria-pressed="true">한국어</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow" data-i18n="hero.eyebrow">iOS · Android 앱 스튜디오</p>
+      <h1 data-i18n="hero.h1">작은 유틸리티 앱을, 정직하게 만듭니다.</h1>
+      <p class="lede" data-i18n="hero.lede">혼자 만드는 스튜디오입니다. 주사위, 환율, 클립보드, 성경, 사진 정리 — 한 가지 일을 제대로 하는 앱을 iPhone과 Android로 내놓습니다.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#apps" data-i18n="hero.cta">앱 보기</a>
+        <a class="btn ghost" href="mailto:tmdals999@gmail.com" data-email data-i18n="hero.cta2">문의하기</a>
+      </div>
+      <div class="shelf" data-render="shelf" aria-hidden="true"></div>
+    </div>
+    <dl class="facts" data-render="facts"></dl>
+  </section>
+
+  <section class="wrap principles" aria-labelledby="principles-h">
+    <h2 id="principles-h" class="eyebrow principles-label" data-i18n="p.eyebrow">만드는 원칙</h2>
+    <article><h3 data-i18n="p1.h">한 가지 일을 제대로</h3><p data-i18n="p1.p">기능을 쌓기보다 핵심 동작 하나를 끝까지 다듬습니다.</p></article>
+    <article><h3 data-i18n="p2.h">개인정보는 최소로</h3><p data-i18n="p2.p">앱마다 처리방침을 공개하고, 수집하지 않는 것부터 적습니다.</p></article>
+    <article><h3 data-i18n="p3.h">만든 사람이 직접 답합니다</h3><p data-i18n="p3.p">문의 메일은 개발자가 직접 읽고 답합니다.</p></article>
+  </section>
+
+  <section id="apps" class="section" aria-labelledby="apps-h">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2 id="apps-h" data-i18n="apps.h">앱</h2>
+          <p class="sub" data-i18n="apps.sub">스토어에서 바로 받을 수 있는 앱과, 심사·준비 중인 앱입니다.</p>
+        </div>
+      </div>
+      <h3 class="group-label"><span data-i18n="apps.live">출시된 앱</span><span class="count" data-count="live"></span></h3>
+      <div class="apps" data-render="apps-live"></div>
+      <h3 class="group-label"><span data-i18n="apps.soon">심사 중 · 준비 중</span><span class="count" data-count="soon"></span></h3>
+      <div class="apps" data-render="apps-soon"></div>
+      <noscript>
+        <ul class="noscript-list">
+          <li>FX AI — <a href="https://apps.apple.com/app/id6761619382">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.fxai.app">Google Play</a></li>
+          <li>ClipStash — <a href="https://apps.apple.com/app/id6760615594">App Store</a></li>
+          <li>DiceRoll — <a href="https://play.google.com/store/apps/details?id=com.diceroll3d.app">Google Play</a></li>
+          <li>데이럭 DayLuck — <a href="https://play.google.com/store/apps/details?id=com.dayluck.app">Google Play</a></li>
+          <li>CreatorMix Digital — <a href="https://play.google.com/store/apps/details?id=digital.creatormix.app">Google Play</a></li>
+          <li>Keepmemory — <a href="https://dsm0829.github.io/spaceback-site/">웹사이트</a></li>
+          <li>Codex Bible — <a href="https://dsm0829.github.io/codex-bible-privacy/">개인정보 처리방침</a></li>
+        </ul>
+      </noscript>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Support and legal">
+    <div class="wrap duo">
+      <div class="duo-item">
+        <h2 data-i18n="support.h">도움이 필요하신가요?</h2>
+        <p data-i18n="support.p">모든 앱의 문의는 한 곳으로 받습니다.</p>
+        <p class="actions">
+          <a class="btn" href="/support/" data-i18n="support.cta">지원 페이지</a>
+          <a class="btn ghost" href="mailto:tmdals999@gmail.com" data-email data-i18n="support.email">이메일 보내기</a>
+        </p>
+      </div>
+      <div class="duo-item">
+        <h2 data-i18n="legal.h">개인정보 처리방침 · 이용약관</h2>
+        <p data-i18n="legal.p">앱마다 별도 문서가 있습니다. 한 곳에 모아 두었습니다.</p>
+        <p class="actions"><a class="btn ghost" href="/privacy/" data-i18n="legal.cta">전체 보기</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="/"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" style="fill:var(--accent)"/><path d="M8.5 10.5 16 23l7.5-12.5" fill="none" style="stroke:var(--accent-ink)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>VISM STUDIO</b></a>
+      <p data-i18n="footer.tag">iOS와 Android 앱을 만듭니다.</p>
+      <p class="legal-line">© <span data-year>2026</span> VISM STUDIO · YOU SEUNGMIN · <a href="mailto:tmdals999@gmail.com" data-email data-email-text>tmdals999@gmail.com</a></p>
+      <p class="note" data-i18n="footer.note">이 사이트는 쿠키와 분석 도구를 쓰지 않습니다.</p>
+    </div>
+    <div class="cols">
+      <div>
+        <h4 data-i18n="footer.col.site">사이트</h4>
+        <a href="/#apps" data-i18n="nav.apps">앱</a>
+        <a href="/support/" data-i18n="nav.support">지원</a>
+        <a href="/privacy/" data-i18n="nav.privacy">개인정보</a>
+        <a href="https://github.com/dSM0829" target="_blank" rel="noopener" data-i18n="footer.github">GitHub</a>
+      </div>
+      <div>
+        <h4 data-i18n="footer.col.store">스토어</h4>
+        <a href="https://play.google.com/store/apps/developer?id=VISM+STUDIO" target="_blank" rel="noopener" data-i18n="footer.play">Google Play 개발자 페이지</a>
+        <a href="https://apps.apple.com/developer/id1884590037" target="_blank" rel="noopener" data-i18n="footer.appstore">App Store 개발자 페이지</a>
+        <a href="#main" data-i18n="footer.top">맨 위로</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/apps.js"></script>
+<script src="/assets/site.js"></script>
+</body>
+</html>
