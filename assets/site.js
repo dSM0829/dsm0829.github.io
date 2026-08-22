@@ -24,7 +24,6 @@
       'hero.eyebrow': 'iOS · Android 앱 스튜디오',
       'hero.h1': '작은 유틸리티 앱을, 정직하게 만듭니다.',
       'hero.cta': '앱 보기', 'hero.cta2': '문의하기',
-      'facts.apps': '앱', 'facts.live': '출시', 'facts.platforms': '플랫폼', 'facts.dev': '개발자', 'facts.since': '시작', 'facts.contact': '문의',
       'apps.h': '앱', 'apps.sub': '스토어에서 바로 받을 수 있는 앱과, 심사·준비 중인 앱입니다.',
       'apps.live': '출시된 앱', 'apps.soon': '심사 중 · 준비 중',
       'support.h': '도움이 필요하신가요?',
@@ -74,7 +73,6 @@
       'hero.eyebrow': 'iOS · Android app studio',
       'hero.h1': 'Small utility apps, made honestly.',
       'hero.cta': 'See the apps', 'hero.cta2': 'Get in touch',
-      'facts.apps': 'Apps', 'facts.live': 'Available', 'facts.platforms': 'Platforms', 'facts.dev': 'Developer', 'facts.since': 'Since', 'facts.contact': 'Contact',
       'apps.h': 'Apps', 'apps.sub': 'What you can install today, and what is in review or on the way.',
       'apps.live': 'Available now', 'apps.soon': 'In review · coming soon',
       'support.h': 'Need help?',
@@ -218,20 +216,6 @@
     if ((c = document.querySelector('[data-count="live"]'))) c.textContent = String(live.length);
     if ((c = document.querySelector('[data-count="soon"]'))) c.textContent = String(soon.length);
   }
-  function renderFacts() {
-    var el = document.querySelector('[data-render="facts"]');
-    if (!el) return;
-    var live = APPS.filter(isLive).length;
-    var rows = [
-      [t('facts.apps'), String(APPS.length)],
-      [t('facts.live'), String(live)],
-      [t('facts.platforms'), 'iOS · Android'],
-      [t('facts.dev'), 'VISM STUDIO'],
-      [t('facts.since'), '2026'],
-      [t('facts.contact'), '<a href="mailto:' + SITE.email + '">' + SITE.email + '</a>']
-    ];
-    el.innerHTML = rows.map(function (r) { return '<div><dt>' + esc(r[0]) + '</dt><dd>' + r[1] + '</dd></div>'; }).join('');
-  }
   function renderSupportList() {
     var el = document.querySelector('[data-render="support-list"]');
     if (!el) return;
@@ -264,7 +248,7 @@
 
   function renderAll() {
     applyStatic();
-    renderApps(); renderFacts(); renderSupportList(); renderLegalTable();
+    renderApps(); renderSupportList(); renderLegalTable();
   }
 
   /* ---------- events ---------- */
