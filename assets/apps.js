@@ -112,16 +112,16 @@ window.VISM_APPS = [
   {
     id: 'keepmemory',
     name: { ko: 'Keepmemory', en: 'Keepmemory' },
-    storeName: { ko: 'Keepmemory: Safe Photo Cleaner', en: 'Keepmemory: Safe Photo Cleaner' },
+    storeName: { ko: 'Keepmemory: 사진 정리', en: 'Keepmemory: Safe Photo Cleaner' },
     category: { ko: '사진 저장공간 정리 · 사진', en: 'Photo storage cleaner · Photo & Video' },
     tagline: {
-      ko: '사진을 한 장도 지우지 않고 저장공간을 확보합니다. 라이브 포토의 숨은 영상만 떼어내고 사진은 그대로 — 같은 해상도, 같은 날짜, 같은 앨범.',
-      en: 'Free up iPhone storage without deleting a single photo. Strips only the hidden video from Live Photos — same resolution, same date, same albums.'
+      ko: '사진을 한 장도 지우지 않고 저장공간을 확보합니다. 라이브 포토·모션 포토의 숨은 영상만 떼어내고 사진은 그대로 — 같은 해상도, 같은 날짜, 같은 앨범.',
+      en: 'Free up phone storage without deleting a single photo. Strips only the hidden video from Live Photos and Motion Photos — same resolution, same date, same albums.'
     },
     icon: '/assets/icons/keepmemory.png',
     platforms: {
       ios:     { status: 'review', url: 'https://apps.apple.com/app/id6803499711' },
-      android: { status: 'soon' }
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.spaceback.app' }
     },
     links: {
       website: 'https://dsm0829.github.io/spaceback-site/',
@@ -132,7 +132,7 @@ window.VISM_APPS = [
   {
     id: 'codexbible',
     name: { ko: 'Codex Bible', en: 'Codex Bible' },
-    storeName: { ko: '바른성경 · 오프라인 성경', en: 'Codex Bible: KJV Offline Study' },
+    storeName: { ko: '바른성경: 오프라인 성경읽기', en: 'Codex Bible: KJV Offline Study' },
     category: { ko: '오프라인 성경 · 참고', en: 'Offline Bible · Reference' },
     tagline: {
       ko: '신호가 없어도 읽는 성경. 번역본 전체를 내려받아 오프라인으로 읽고, 하이라이트·메모·책갈피를 남깁니다.',
@@ -140,8 +140,8 @@ window.VISM_APPS = [
     },
     icon: '/assets/icons/codexbible.png',
     platforms: {
-      ios:     { status: 'soon', url: 'https://apps.apple.com/app/id6804084716' },
-      android: { status: 'soon' }
+      ios:     { status: 'review', url: 'https://apps.apple.com/app/id6804084716' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.codexbible.app' }
     },
     links: {
       privacy: { ko: 'https://dsm0829.github.io/codex-bible-privacy/', en: 'https://dsm0829.github.io/codex-bible-privacy/en.html' }
