@@ -168,6 +168,8 @@ main > .section:first-child { border-top: 0; padding-top: 64px; }
 }
 a.store:hover { border-color: var(--accent); color: var(--accent); }
 .store svg { width: 13px; height: 13px; flex: none; }
+.store svg.pf { width: 14px; height: 14px; margin-right: -1px; }
+.store.is-pending svg.pf { opacity: .7; }
 .store.is-pending { color: var(--ink-3); border-style: dashed; }
 .st {
   font: 500 10.5px/1.4 var(--font-mono); letter-spacing: 0.05em; text-transform: uppercase;
