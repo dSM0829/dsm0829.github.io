@@ -15,14 +15,16 @@
   --accent-ink: #FFFFFF;
   --accent-soft: #E7EBFB;
   /* 히어로 마지막 줄이 순환할 때 쓰는 색 */
-  --rot-1: #2A47D0;   --rot-2: #0E7A57;
-  --rot-3: #B23A6B;   --rot-4: #6B3FC4;
+  --rot-1: #F3511B;   --rot-2: #0F805E;
+  --rot-3: #0968F6;   --rot-4: #631F99;
   --ok: #1E7A4B;      --ok-soft: #E2F3E9;
   --warn: #8A5A00;    --warn-soft: #FBEFD6;
   --mute: #5F677A;    --mute-soft: #ECEEF3;
   --radius: 14px;
   --radius-sm: 8px;
-  --font-sans: "IBM Plex Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", "Noto Sans KR", sans-serif;
+  /* eBay 의 Market Sans 는 전용 폰트라 쓸 수 없다. 가장 가까운 무료 조합으로
+     라틴은 Inter, 한글은 Noto Sans KR 을 쓴다. */
+  --font-sans: Inter, "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --maxw: 1080px;
   --gutter: 24px;
@@ -41,8 +43,8 @@
     --accent: #91A5FF;
     --accent-ink: #0E1016;
     --accent-soft: #1B2342;
-    --rot-1: #91A5FF;   --rot-2: #5FD3A6;
-    --rot-3: #FF9AC0;   --rot-4: #C4A5FF;
+    --rot-1: #FF8A5C;   --rot-2: #4FC79C;
+    --rot-3: #6BA5FF;   --rot-4: #C08CF0;
     --ok: #63CF92;      --ok-soft: #143324;
     --warn: #E6B864;    --warn-soft: #382C12;
     --mute: #9AA2B6;    --mute-soft: #1F2431;
@@ -128,10 +130,14 @@ button { font: inherit; color: inherit; }
 
 /* ---------- hero ---------- */
 .hero { padding: 96px var(--gutter) 76px; }
+/* developer.ebay.com 의 히어로 규격을 그대로 따른다:
+   line-height 1, letter-spacing -0.03em, weight 700.
+   크기는 eBay 가 15vw 를 쓰지만 한글이 글자당 1em 을 차지해 같은 값이면
+   줄이 넘친다 — 우리 컨테이너(1080px)에서 가장 긴 줄이 꽉 차는 9.5vw 로 맞췄다. */
 .hero-title {
-  font-size: clamp(38px, 8vw, 92px); font-weight: 700;
-  letter-spacing: -0.036em; line-height: 1.02;
-  margin: 0 0 30px; max-width: 12em;
+  font-size: clamp(24px, 9.5vw, 104px); font-weight: 700;
+  letter-spacing: -0.03em; line-height: 1;
+  margin: 0 0 34px;
 }
 .hero-title span { display: block; }
 .hero-title .rot-word {
@@ -143,15 +149,15 @@ button { font: inherit; color: inherit; }
 /* 문구를 바꾸기 직전 한 박자 — 위로 살짝 빠지면서 사라진다 */
 .hero-title .rot-word.is-out { opacity: 0; transform: translateY(-0.16em); }
 .hero-lede {
-  color: var(--ink-2); max-width: 34em;
-  font-size: clamp(15px, 1.4vw, 18px); line-height: 1.62;
+  color: var(--ink); max-width: 690px;
+  font-size: 20px; line-height: 1.5;
   margin: 0 0 32px;
 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 @media (max-width: 640px) {
   .hero { padding: 56px var(--gutter) 48px; }
-  .hero-title { letter-spacing: -0.03em; margin-bottom: 22px; }
-  .hero-lede { margin-bottom: 26px; }
+  .hero-title { margin-bottom: 22px; }
+  .hero-lede { font-size: 17px; margin-bottom: 26px; }
 }
 
 /* ---------- sections ---------- */
