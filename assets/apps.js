@@ -146,5 +146,19 @@ window.VISM_APPS = [
     links: {
       privacy: { ko: 'https://dsm0829.github.io/codex-bible-privacy/', en: 'https://dsm0829.github.io/codex-bible-privacy/en.html' }
     }
+  },
+  {
+    id: 'holofoil',
+    name: { ko: 'Holofoil', en: 'Holofoil' },
+    storeName: { ko: 'Holofoil: 트레이딩 카드 스캐너', en: 'Holofoil: Trading Card Scanner' },
+    category: { ko: '카드 스캐너 · 수집', en: 'Card scanner · Collecting' },
+    tagline: {
+      ko: '카드를 비추면 어떤 카드인지 알아냅니다. 33,000장을 오프라인으로 인식하고, 보유 목록을 관리하고, 시세와 eBay 매물을 한 번에 확인합니다.',
+      en: 'Point your camera at a card and it knows which one. Recognizes 33,000+ cards offline, tracks what you own, and shows values with eBay listings in one tap.'
+    },
+    icon: '/assets/icons/holofoil.png',
+    platforms: {
+      ios: { status: 'soon' }
+    }
   }
 ];
