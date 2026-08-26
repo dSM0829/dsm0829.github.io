@@ -263,6 +263,8 @@
 
   /* ---------- hero rotator ---------- */
   var rotTimer = null;
+  var LETTER_STAGGER = 0.05;   // 초 — developer.ebay.com 과 같은 간격
+
   function startRotator() {
     if (rotTimer) { clearInterval(rotTimer); rotTimer = null; }
     var el = document.querySelector('[data-rotator]');
@@ -270,9 +272,20 @@
 
     var items = t('hero.rotate').split('|');
     var i = 0;
+
+    // 글자를 하나씩 스팬에 담고 순서대로 지연을 준다. 공백도 한 칸을
+    // 차지해야 하므로 같이 담는다(스타일의 white-space: pre 가 폭을 지킨다).
     function paint() {
-      el.textContent = items[i];
       el.style.color = 'var(--rot-' + (i % 4 + 1) + ')';
+      el.textContent = '';
+      var chars = items[i].split('');
+      for (var k = 0; k < chars.length; k++) {
+        var sp = document.createElement('span');
+        sp.className = 'rot-letter';
+        sp.textContent = chars[k];
+        sp.style.animationDelay = (k * LETTER_STAGGER).toFixed(2) + 's';
+        el.appendChild(sp);
+      }
     }
     paint();
 
@@ -286,8 +299,8 @@
         i = (i + 1) % items.length;
         paint();
         el.classList.remove('is-out');
-      }, 340);
-    }, 2600);
+      }, 160);
+    }, 2800);
   }
 
   function renderAll() {

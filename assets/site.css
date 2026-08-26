@@ -26,7 +26,7 @@
      라틴은 Inter, 한글은 Noto Sans KR 을 쓴다. */
   --font-sans: Inter, "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  --maxw: 1080px;
+  --maxw: 1200px;
   --gutter: 24px;
   color-scheme: light;
 }
@@ -57,6 +57,8 @@ html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
+  /* 위 규칙이 letter-enter 를 없애면 글자가 opacity 0 으로 남는다 */
+  .hero-title .rot-letter { opacity: 1 !important; transform: none !important; }
 }
 body {
   margin: 0;
@@ -135,19 +137,34 @@ button { font: inherit; color: inherit; }
    크기는 eBay 가 15vw 를 쓰지만 한글이 글자당 1em 을 차지해 같은 값이면
    줄이 넘친다 — 우리 컨테이너(1080px)에서 가장 긴 줄이 꽉 차는 9.5vw 로 맞췄다. */
 .hero-title {
-  font-size: clamp(24px, 9.5vw, 104px); font-weight: 700;
+  font-size: clamp(28px, 11vw, 120px); font-weight: 700;
   letter-spacing: -0.03em; line-height: 1;
   margin: 0 0 34px;
 }
 .hero-title span { display: block; }
-.hero-title .rot-word {
-  display: inline-block; color: var(--rot-1);
-  /* 색은 전환하지 않는다 — 문구가 투명해진 순간에 바꾸므로 보간이 필요 없고,
-     var() 사이의 color 전환은 이전 값에 머무는 문제가 있다. */
-  transition: opacity .34s ease, transform .34s ease;
+/* 순환 줄. developer.ebay.com 과 같은 방식으로 글자를 하나씩 스팬에 담아
+   0.05s 씩 밀리며 아래에서 튀어오르게 한다. --y-offset 과 스프링 곡선,
+   지속시간 모두 그 페이지에서 실측한 값이다. */
+.hero-title .rot-line {
+  display: inline-flex; position: relative;
+  --y-offset: .125em;
+  color: var(--rot-1);
+  transition: opacity .16s ease;
 }
-/* 문구를 바꾸기 직전 한 박자 — 위로 살짝 빠지면서 사라진다 */
-.hero-title .rot-word.is-out { opacity: 0; transform: translateY(-0.16em); }
+.hero-title .rot-line.is-out { opacity: 0; }
+.hero-title .rot-letter {
+  display: block; white-space: pre; opacity: 0;
+  animation: letter-enter .5s forwards;
+  animation-timing-function: linear(
+    0 0%, 0.008 1.1%, 0.034 2.3%, 0.134 4.9%, 0.264 7.3%, 0.683 14.3%,
+    0.797 16.5%, 0.89 18.6%, 0.967 20.7%, 1.027 22.8%, 1.073 25%,
+    1.104 27.3%, 1.123 30.6%, 1.119 34.3%, 1.018 49.5%, 0.988 58.6%,
+    0.985 65.2%, 1 84.5%, 1 100%);
+}
+@keyframes letter-enter {
+  from { opacity: 0; transform: translateY(var(--y-offset)); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 .hero-lede {
   color: var(--ink); max-width: 690px;
   font-size: 20px; line-height: 1.5;
