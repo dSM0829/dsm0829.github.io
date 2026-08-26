@@ -22,7 +22,9 @@
       'a11y.lang': '언어 선택',
       'nav.apps': '앱', 'nav.support': '지원', 'nav.privacy': '개인정보',
       'hero.eyebrow': 'iOS · Android 앱 스튜디오',
-      'hero.h1a': '작은 유틸리티 앱을', 'hero.h1b': '정직하게 만듭니다',
+      'hero.h1a': '작은 유틸리티 앱을', 'hero.h1b': '군더더기 없이',
+      'hero.rotate': '정직하게 만듭니다|가볍게 만듭니다|빠르게 만듭니다|오래 쓰게 만듭니다',
+      'hero.a11y': '작은 유틸리티 앱을 군더더기 없이 정직하게 만듭니다',
       'hero.lede': '앱 하나가 한 가지 일을 제대로 하도록 만듭니다. 군더더기 없이, iOS와 Android에서 같은 품질로 다듬습니다.',
       'hero.cta': '앱 보기', 'hero.cta2': '문의하기',
       'apps.h': '앱', 'apps.sub': '스토어에서 바로 받을 수 있는 앱과, 심사·준비 중인 앱입니다.',
@@ -72,7 +74,9 @@
       'a11y.lang': 'Language',
       'nav.apps': 'Apps', 'nav.support': 'Support', 'nav.privacy': 'Privacy',
       'hero.eyebrow': 'iOS · Android app studio',
-      'hero.h1a': 'Small utility apps,', 'hero.h1b': 'made honestly.',
+      'hero.h1a': 'Small utility apps,', 'hero.h1b': 'with no clutter,',
+      'hero.rotate': 'made honestly.|made light.|made fast.|made to last.',
+      'hero.a11y': 'Small utility apps, with no clutter, made honestly.',
       'hero.lede': 'Each app is built to do one job properly — no clutter, no upsell, finished to the same standard on iOS and Android.',
       'hero.cta': 'See the apps', 'hero.cta2': 'Get in touch',
       'apps.h': 'Apps', 'apps.sub': 'What you can install today, and what is in review or on the way.',
@@ -257,9 +261,39 @@
     el.innerHTML = '<table class="legal">' + head + '<tbody>' + body + '</tbody></table>';
   }
 
+  /* ---------- hero rotator ---------- */
+  var rotTimer = null;
+  function startRotator() {
+    if (rotTimer) { clearInterval(rotTimer); rotTimer = null; }
+    var el = document.querySelector('[data-rotator]');
+    if (!el) return;
+
+    var items = t('hero.rotate').split('|');
+    var i = 0;
+    function paint() {
+      el.textContent = items[i];
+      el.style.color = 'var(--rot-' + (i % 4 + 1) + ')';
+    }
+    paint();
+
+    // 움직임을 줄이도록 설정한 사용자에게는 첫 문구만 보여주고 멈춘다.
+    var mq = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+    if ((mq && mq.matches) || items.length < 2) return;
+
+    rotTimer = setInterval(function () {
+      el.classList.add('is-out');
+      setTimeout(function () {
+        i = (i + 1) % items.length;
+        paint();
+        el.classList.remove('is-out');
+      }, 340);
+    }, 2600);
+  }
+
   function renderAll() {
     applyStatic();
     renderApps(); renderSupportList(); renderLegalTable();
+    startRotator();
   }
 
   /* ---------- events ---------- */

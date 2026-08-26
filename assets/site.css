@@ -14,6 +14,9 @@
   --accent: #2A47D0;
   --accent-ink: #FFFFFF;
   --accent-soft: #E7EBFB;
+  /* 히어로 마지막 줄이 순환할 때 쓰는 색 */
+  --rot-1: #2A47D0;   --rot-2: #0E7A57;
+  --rot-3: #B23A6B;   --rot-4: #6B3FC4;
   --ok: #1E7A4B;      --ok-soft: #E2F3E9;
   --warn: #8A5A00;    --warn-soft: #FBEFD6;
   --mute: #5F677A;    --mute-soft: #ECEEF3;
@@ -38,6 +41,8 @@
     --accent: #91A5FF;
     --accent-ink: #0E1016;
     --accent-soft: #1B2342;
+    --rot-1: #91A5FF;   --rot-2: #5FD3A6;
+    --rot-3: #FF9AC0;   --rot-4: #C4A5FF;
     --ok: #63CF92;      --ok-soft: #143324;
     --warn: #E6B864;    --warn-soft: #382C12;
     --mute: #9AA2B6;    --mute-soft: #1F2431;
@@ -129,7 +134,14 @@ button { font: inherit; color: inherit; }
   margin: 0 0 30px; max-width: 12em;
 }
 .hero-title span { display: block; }
-.hero-title .accent { color: var(--accent); }
+.hero-title .rot-word {
+  display: inline-block; color: var(--rot-1);
+  /* 색은 전환하지 않는다 — 문구가 투명해진 순간에 바꾸므로 보간이 필요 없고,
+     var() 사이의 color 전환은 이전 값에 머무는 문제가 있다. */
+  transition: opacity .34s ease, transform .34s ease;
+}
+/* 문구를 바꾸기 직전 한 박자 — 위로 살짝 빠지면서 사라진다 */
+.hero-title .rot-word.is-out { opacity: 0; transform: translateY(-0.16em); }
 .hero-lede {
   color: var(--ink-2); max-width: 34em;
   font-size: clamp(15px, 1.4vw, 18px); line-height: 1.62;
