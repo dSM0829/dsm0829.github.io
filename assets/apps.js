@@ -158,7 +158,8 @@ window.VISM_APPS = [
     },
     icon: '/assets/icons/holofoil.png',
     platforms: {
-      ios: { status: 'soon' }
+      ios:     { status: 'soon' },
+      android: { status: 'soon' }
     }
   }
 ];
