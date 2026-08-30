@@ -305,3 +305,29 @@ table.legal td.mono { font: 400 13px/1.5 var(--font-mono); }
 .nf h1 { font-size: 32px; margin: 12px 0; }
 .nf p { color: var(--ink-2); }
 .nf .actions { margin-top: 20px; display: flex; gap: 10px; }
+
+/* 앱 카드 안의 스토어 스크린샷 — 가로 스크롤 스트립 */
+.shots {
+  display: flex; gap: 10px;
+  margin: 14px 0 2px;
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  padding-bottom: 6px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.shots::-webkit-scrollbar { height: 6px; }
+.shots::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 3px; }
+.shot {
+  flex: 0 0 auto; scroll-snap-align: start;
+  width: 116px; height: auto; aspect-ratio: 420 / 909;
+  object-fit: cover; border-radius: 10px;
+  background: var(--surface-2);
+  border: 1px solid rgba(128,128,128,.18);
+}
+@media (max-width: 640px) {
+  .shot { width: 98px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .shots { scroll-behavior: auto; }
+}

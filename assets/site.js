@@ -60,6 +60,7 @@
       'pp.view': '보기',
       'pp.site.h': '이 웹사이트에 대하여',
       'pp.site.p1': 'dsm0829.github.io 는 GitHub Pages 로 호스팅되는 정적 사이트입니다. 쿠키를 쓰지 않고, 방문자 분석 도구도 넣지 않았습니다.',
+      'shots.alt': '스크린샷',
       'pp.site.p2': '서버 접속 기록은 호스팅 사업자인 GitHub 의 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">개인정보 정책</a>을 따릅니다. 글꼴은 Google Fonts 에서 불러오며, 이때 브라우저가 Google 서버에 접속합니다. 선택한 언어(한국어/English)는 브라우저의 localStorage 에만 저장되고 어디로도 전송되지 않습니다.',
       'pp.site.p3': '이 사이트나 앱의 개인정보에 관한 문의:',
       'nf.eyebrow': '404', 'nf.h': '페이지를 찾을 수 없습니다', 'nf.p': '주소가 바뀌었거나 없는 페이지입니다. 앱 목록은 홈에서 볼 수 있습니다.', 'nf.home': '홈으로', 'nf.support': '지원 페이지'
@@ -112,6 +113,7 @@
       'pp.view': 'View',
       'pp.site.h': 'About this website',
       'pp.site.p1': 'dsm0829.github.io is a static site hosted on GitHub Pages. It sets no cookies and runs no analytics.',
+      'shots.alt': 'screenshot',
       'pp.site.p2': 'Server logs are governed by GitHub’s <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">privacy statement</a> as the hosting provider. Fonts load from Google Fonts, which means your browser contacts Google’s servers. Your language choice (한국어/English) is stored only in your browser’s localStorage and is never sent anywhere.',
       'pp.site.p3': 'Privacy questions about this site or any app:',
       'nf.eyebrow': '404', 'nf.h': 'Page not found', 'nf.p': 'The address may have changed or never existed. The app list is on the home page.', 'nf.home': 'Go home', 'nf.support': 'Support page'
@@ -120,14 +122,14 @@
 
   /* ---------- language ---------- */
   function detectLang() {
-    // 1) URL ?lang=ko|en (공유 링크용: https://dsm0829.github.io/?lang=en) 2) 저장된 선택 3) 브라우저 언어
+    // 1) URL ?lang=ko|en (공유 링크용) 2) 사용자가 직접 고른 값
+    // 기기 언어는 보지 않는다 — 기본은 항상 영어. 한국어는 토글로만 바뀐다.
     try {
       var q = (location.search.match(/[?&]lang=(ko|en)\b/) || [])[1];
       if (q) { try { localStorage.setItem('vism-lang', q); } catch (e0) {} return q; }
     } catch (e1) {}
     try { var s = localStorage.getItem('vism-lang'); if (s === 'ko' || s === 'en') return s; } catch (e) {}
-    var n = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-    return n.indexOf('ko') === 0 ? 'ko' : 'en';
+    return 'en';
   }
   var lang = detectLang();
   function t(key) {
@@ -209,6 +211,15 @@
     if (l.support) out.push('<a href="' + esc(L(l.support)) + '" target="_blank" rel="noopener">' + esc(t('link.support')) + '</a>');
     return out.join('');
   }
+  function shotRow(app) {
+    var sh = app.shots || [];
+    if (!sh.length) return '';
+    var name = esc(L(app.name));
+    return '<div class="shots" role="list">' + sh.map(function (src, i) {
+      return '<img class="shot" role="listitem" src="' + esc(src) + '" alt="' + name +
+        ' \u2014 ' + esc(t('shots.alt')) + ' ' + (i + 1) + '" loading="lazy" decoding="async">';
+    }).join('') + '</div>';
+  }
   function card(app) {
     var p = app.platforms || {};
     return '<article class="app" id="app-' + esc(app.id) + '">' +
@@ -217,6 +228,7 @@
         '<div class="app-head"><h3 class="app-name">' + esc(L(app.name)) + '</h3><span class="app-cat">' + esc(L(app.category)) + '</span></div>' +
         '<p class="app-tag">' + esc(L(app.tagline)) + '</p>' +
         '<div class="stores">' + storeBtn('ios', p.ios) + storeBtn('android', p.android) + '</div>' +
+        shotRow(app) +
         '<div class="app-links">' + linkRow(app) + '</div>' +
       '</div></article>';
   }

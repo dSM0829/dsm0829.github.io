@@ -24,6 +24,7 @@ window.VISM_APPS = [
       en: 'AI analyzes 12 currency pairs four times a day to find the best time to exchange. Timing score, target-rate alerts, four technical indicators.'
     },
     icon: '/assets/icons/fxai.png',
+    shots: ['/assets/shots/fxai/1.jpg', '/assets/shots/fxai/2.jpg', '/assets/shots/fxai/3.jpg', '/assets/shots/fxai/4.jpg'],
     platforms: {
       ios:     { status: 'live', url: 'https://apps.apple.com/app/id6761619382' },
       android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.fxai.app' }
@@ -44,6 +45,7 @@ window.VISM_APPS = [
       en: 'Stop losing what you copy. Auto-saves your clipboard and uses AI to keep URLs, numbers, snippets and addresses organized.'
     },
     icon: '/assets/icons/clipstash.png',
+    shots: ['/assets/shots/clipstash/1.jpg', '/assets/shots/clipstash/2.jpg', '/assets/shots/clipstash/3.jpg', '/assets/shots/clipstash/4.jpg'],
     platforms: {
       ios: { status: 'live', url: 'https://apps.apple.com/app/id6760615594' }
     },
@@ -63,6 +65,7 @@ window.VISM_APPS = [
       en: 'Real physics, not a random number generator. Swipe to throw and watch the dice tumble and settle. D4–D20, eight skins, no account.'
     },
     icon: '/assets/icons/diceroll.png',
+    shots: ['/assets/shots/diceroll/1.jpg', '/assets/shots/diceroll/2.jpg', '/assets/shots/diceroll/3.jpg', '/assets/shots/diceroll/4.jpg'],
     platforms: {
       ios:     { status: 'review', url: 'https://apps.apple.com/app/id6803302729' },
       android: { status: 'live',   url: 'https://play.google.com/store/apps/details?id=com.diceroll3d.app' }
@@ -82,6 +85,7 @@ window.VISM_APPS = [
       en: 'Daily fortune from your Saju, auspicious days this month, appointment-date readings, friend compatibility and a manseryeok calendar.'
     },
     icon: '/assets/icons/dayluck.png',
+    shots: ['/assets/shots/dayluck/1.jpg', '/assets/shots/dayluck/2.jpg', '/assets/shots/dayluck/3.jpg', '/assets/shots/dayluck/4.jpg'],
     platforms: {
       android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.dayluck.app' }
     },
@@ -100,6 +104,7 @@ window.VISM_APPS = [
       en: 'Free audio & video tools: convert, trim, mix and compress right on your phone.'
     },
     icon: '/assets/icons/creatormix.png',
+    shots: ['/assets/shots/creatormix/1.jpg', '/assets/shots/creatormix/2.jpg', '/assets/shots/creatormix/3.jpg', '/assets/shots/creatormix/4.jpg'],
     platforms: {
       ios:     { status: 'review', url: 'https://apps.apple.com/app/id6799359766' },
       android: { status: 'live',   url: 'https://play.google.com/store/apps/details?id=digital.creatormix.app' }
@@ -119,6 +124,7 @@ window.VISM_APPS = [
       en: 'Free up phone storage without deleting a single photo. Strips only the hidden video from Live Photos and Motion Photos — same resolution, same date, same albums.'
     },
     icon: '/assets/icons/keepmemory.png',
+    shots: ['/assets/shots/keepmemory/1.jpg', '/assets/shots/keepmemory/2.jpg', '/assets/shots/keepmemory/3.jpg'],
     platforms: {
       ios:     { status: 'review', url: 'https://apps.apple.com/app/id6803499711' },
       android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.spaceback.app' }
@@ -139,6 +145,7 @@ window.VISM_APPS = [
       en: 'Read Scripture with no signal. Download full Bibles, highlight verses, and keep notes and bookmarks — all offline.'
     },
     icon: '/assets/icons/codexbible.png',
+    shots: ['/assets/shots/codexbible/1.jpg', '/assets/shots/codexbible/2.jpg', '/assets/shots/codexbible/3.jpg', '/assets/shots/codexbible/4.jpg'],
     platforms: {
       ios:     { status: 'review', url: 'https://apps.apple.com/app/id6804084716' },
       android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.codexbible.app' }
