@@ -164,9 +164,13 @@ window.VISM_APPS = [
       en: 'Point your camera at a card and it knows which one. Recognizes 33,000+ cards offline, tracks what you own, and shows values with eBay listings in one tap.'
     },
     icon: '/assets/icons/holofoil.png',
+    shots: ['/assets/shots/holofoil/1.jpg', '/assets/shots/holofoil/2.jpg', '/assets/shots/holofoil/3.jpg', '/assets/shots/holofoil/4.jpg'],
     platforms: {
-      ios:     { status: 'soon' },
+      ios:     { status: 'review', url: 'https://apps.apple.com/app/id6806115174' },
       android: { status: 'soon' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/holofoil-privacy/'
     }
   }
 ];
