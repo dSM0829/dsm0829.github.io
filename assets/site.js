@@ -38,7 +38,7 @@
       'footer.col.site': '사이트', 'footer.col.store': '스토어',
       'footer.play': 'Google Play 개발자 페이지', 'footer.appstore': 'App Store 개발자 페이지',
       'footer.github': 'GitHub', 'footer.top': '맨 위로',
-      'link.website': '웹사이트', 'link.privacy': '개인정보 처리방침', 'link.terms': '이용약관', 'link.support': '지원', 'link.contact': '문의',
+      'link.website': '웹사이트', 'link.instagram': '인스타그램', 'link.privacy': '개인정보 처리방침', 'link.terms': '이용약관', 'link.support': '지원', 'link.contact': '문의',
       'status.live': '출시', 'status.review': '심사 중', 'status.soon': '준비 중',
       'sp.eyebrow': '지원', 'sp.h': '도움이 필요하신가요?',
       'sp.lede': '모든 앱의 문의는 이메일로 받습니다. 만든 사람이 직접 읽고, 보통 며칠 안에 답합니다.',
@@ -91,7 +91,7 @@
       'footer.col.site': 'Site', 'footer.col.store': 'Stores',
       'footer.play': 'Google Play developer page', 'footer.appstore': 'App Store developer page',
       'footer.github': 'GitHub', 'footer.top': 'Back to top',
-      'link.website': 'Website', 'link.privacy': 'Privacy policy', 'link.terms': 'Terms', 'link.support': 'Support', 'link.contact': 'Contact',
+      'link.website': 'Website', 'link.instagram': 'Instagram', 'link.privacy': 'Privacy policy', 'link.terms': 'Terms', 'link.support': 'Support', 'link.contact': 'Contact',
       'status.live': 'Available', 'status.review': 'In review', 'status.soon': 'Coming soon',
       'sp.eyebrow': 'Support', 'sp.h': 'Need help?',
       'sp.lede': 'Support for every app is by email. The developer reads every message and usually replies within a few days.',
@@ -206,6 +206,7 @@
   function linkRow(app) {
     var out = [], l = app.links || {};
     if (l.website) out.push('<a href="' + esc(L(l.website)) + '" target="_blank" rel="noopener">' + esc(t('link.website')) + '</a>');
+    if (l.instagram) out.push('<a href="' + esc(L(l.instagram)) + '" target="_blank" rel="noopener">' + esc(t('link.instagram')) + '</a>');
     if (l.privacy) out.push('<a href="' + esc(L(l.privacy)) + '" target="_blank" rel="noopener">' + esc(t('link.privacy')) + '</a>');
     if (l.terms)   out.push('<a href="' + esc(L(l.terms)) + '" target="_blank" rel="noopener">' + esc(t('link.terms')) + '</a>');
     if (l.support) out.push('<a href="' + esc(L(l.support)) + '" target="_blank" rel="noopener">' + esc(t('link.support')) + '</a>');

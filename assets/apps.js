@@ -109,7 +109,7 @@ window.VISM_APPS = [
       android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.dayluck.app' }
     },
     links: {
-      website: 'https://dayluck.today',
+      instagram: 'https://www.instagram.com/dayluck_official',
       privacy: 'https://classic-eel-26a.notion.site/DAYLUCK-39b6f2bb1ae78166b9a2dc0a30844fe5'
     }
   },
