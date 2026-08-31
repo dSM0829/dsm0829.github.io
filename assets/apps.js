@@ -15,6 +15,25 @@
    ===================================================================== */
 window.VISM_APPS = [
   {
+    id: 'tvremote',
+    name: { ko: 'Universal TV 리모컨', en: 'Universal TV Remote' },
+    storeName: { ko: 'Universal: 만능 TV 리모컨', en: 'Universal: TV Remote Control' },
+    category: { ko: 'TV 리모컨 · 도구', en: 'TV remote · Tools' },
+    tagline: {
+      ko: '별도 장비 없이 와이파이로 LG·삼성·Roku TV를 조작합니다. 같은 네트워크의 TV를 자동으로 찾고, 화면 키보드로 글자를 입력하고, 매크로로 여러 명령을 한 번에 실행합니다.',
+      en: 'Control LG, Samsung, and Roku TVs over Wi-Fi — no extra hardware. Finds TVs on your network, types with the on-screen keyboard, and runs several commands with one tap.'
+    },
+    icon: '/assets/icons/tvremote.png',
+    shots: ['/assets/shots/tvremote/1.jpg', '/assets/shots/tvremote/2.jpg', '/assets/shots/tvremote/3.jpg'],
+    platforms: {
+      ios:     { status: 'review', url: 'https://apps.apple.com/app/id6805628220' },
+      android: { status: 'live',   url: 'https://play.google.com/store/apps/details?id=com.vism.tvremote' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/vismremote-privacy/'
+    }
+  },
+  {
     id: 'fxai',
     name: { ko: 'FX AI', en: 'FX AI' },
     storeName: { ko: 'FX AI - 환율 분석', en: 'FX AI - Exchange Rate' },
