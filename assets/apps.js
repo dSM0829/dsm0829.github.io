@@ -166,7 +166,7 @@ window.VISM_APPS = [
     icon: '/assets/icons/codexbible.png',
     shots: ['/assets/shots/codexbible/1.jpg', '/assets/shots/codexbible/2.jpg', '/assets/shots/codexbible/3.jpg', '/assets/shots/codexbible/4.jpg'],
     platforms: {
-      ios:     { status: 'review', url: 'https://apps.apple.com/app/id6804084716' },
+      ios:     { status: 'live',   url: 'https://apps.apple.com/app/id6804084716' },
       android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.codexbible.app' }
     },
     links: {
