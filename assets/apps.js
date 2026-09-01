@@ -186,7 +186,7 @@ window.VISM_APPS = [
     shots: ['/assets/shots/holofoil/1.jpg', '/assets/shots/holofoil/2.jpg', '/assets/shots/holofoil/3.jpg', '/assets/shots/holofoil/4.jpg'],
     platforms: {
       ios:     { status: 'review', url: 'https://apps.apple.com/app/id6806115174' },
-      android: { status: 'soon' }
+      android: { status: 'live',   url: 'https://play.google.com/store/apps/details?id=com.holofoil.card' }
     },
     links: {
       privacy: 'https://dsm0829.github.io/holofoil-privacy/'
