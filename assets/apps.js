@@ -195,7 +195,7 @@ window.VISM_APPS = [
   {
     id: 'brickid',
     name: { ko: 'BrickDex', en: 'BrickDex' },
-    storeName: { ko: 'BrickDex: 레고 부품 스캐너', en: 'BrickDex: Brick Part Scanner' },
+    storeName: { ko: 'BrickDex: 브릭 부품 스캐너', en: 'BrickDex: Brick Part Scanner' },
     category: { ko: '부품 스캐너 · 수집', en: 'Part scanner · Collecting' },
     tagline: {
       ko: '브릭을 찍으면 부품번호와 희귀도가 나옵니다. 흩어진 부품을 도감으로 모으고, 내 부품으로 만들 수 있는 세트를 찾습니다.',
