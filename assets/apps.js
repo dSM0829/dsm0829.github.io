@@ -191,5 +191,24 @@ window.VISM_APPS = [
     links: {
       privacy: 'https://dsm0829.github.io/holofoil-privacy/'
     }
+  },
+  {
+    id: 'brickid',
+    name: { ko: 'BrickID', en: 'BrickID' },
+    storeName: { ko: 'BrickID: 레고 부품 식별 · 도감', en: 'BrickID: LEGO Part Identifier' },
+    category: { ko: '부품 스캐너 · 수집', en: 'Part scanner · Collecting' },
+    tagline: {
+      ko: '브릭을 찍으면 부품번호와 희귀도가 나옵니다. 흩어진 부품을 도감으로 모으고, 내 부품으로 만들 수 있는 세트를 찾습니다.',
+      en: 'Photograph a brick to get its part number and rarity. Collect stray parts into a dex, and find sets you can build from what you own.'
+    },
+    icon: '/assets/icons/brickid.png',
+    shots: [],
+    platforms: {
+      ios: { status: 'soon' }
+    },
+    links: {
+      support: 'https://dsm0829.github.io/brickid-privacy/support.html',
+      privacy: 'https://dsm0829.github.io/brickid-privacy/'
+    }
   }
 ];
