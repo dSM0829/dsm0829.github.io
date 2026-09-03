@@ -202,7 +202,7 @@ window.VISM_APPS = [
       en: 'Photograph a brick to get its part number and rarity. Collect stray parts into a dex, and find sets you can build from what you own.'
     },
     icon: '/assets/icons/brickid.png',
-    shots: [],
+    shots: ['/assets/shots/brickid/1.jpg', '/assets/shots/brickid/2.jpg', '/assets/shots/brickid/3.jpg', '/assets/shots/brickid/4.jpg'],
     platforms: {
       ios: { status: 'soon' }
     },
