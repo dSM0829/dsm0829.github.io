@@ -1,5 +1,5 @@
 /* VISM STUDIO — 공통 스크립트
-   1) 언어(KO/EN) 토글: data-i18n 속성의 문구를 바꿉니다. 선택은 localStorage 에 저장.
+   1) data-i18n 속성의 문구를 채웁니다. 사이트는 영어 전용이라 토글이 없습니다.
    2) 앱 카드·지원 목록·법적 문서 표를 assets/apps.js 데이터로 렌더링합니다.
    페이지는 data-render="..." 컨테이너만 두면 됩니다. */
 (function () {
@@ -12,59 +12,6 @@
   };
 
   var I18N = {
-    ko: {
-      'title.home': 'VISM STUDIO',
-      'title.support': '지원 — VISM STUDIO',
-      'title.privacy': '개인정보 처리방침 · 이용약관 — VISM STUDIO',
-      'title.404': '페이지를 찾을 수 없습니다 — VISM STUDIO',
-      'a11y.skip': '본문으로 건너뛰기',
-      'a11y.nav': '주 메뉴',
-      'a11y.lang': '언어 선택',
-      'nav.apps': '앱', 'nav.support': '지원', 'nav.privacy': '개인정보',
-      'hero.eyebrow': 'iOS · Android 앱 스튜디오',
-      'hero.h1a': '작은 유틸리티 앱을', 'hero.h1b': '군더더기 없이',
-      'hero.rotate': '정직하게 만듭니다|가볍게 만듭니다|빠르게 만듭니다|오래 쓰게 만듭니다',
-      'hero.a11y': '작은 유틸리티 앱을 군더더기 없이 정직하게 만듭니다',
-      'hero.lede': '앱 하나가 한 가지 일을 제대로 하도록 만듭니다. 군더더기 없이, iOS와 Android에서 같은 품질로 다듬습니다.',
-      'hero.cta': '앱 보기', 'hero.cta2': '문의하기',
-      'apps.h': '앱', 'apps.sub': '스토어에서 바로 받을 수 있는 앱과, 심사·준비 중인 앱입니다.',
-      'apps.live': '출시된 앱', 'apps.soon': '심사 중 · 준비 중',
-      'support.h': '도움이 필요하신가요?',
-      'support.p': '모든 앱의 문의는 한 곳으로 받습니다. 앱 이름과 기기·OS 버전을 함께 적어 주시면 더 빨리 답할 수 있습니다.',
-      'support.cta': '지원 페이지', 'support.email': '이메일 보내기',
-      'legal.h': '개인정보 처리방침 · 이용약관', 'legal.p': '앱마다 별도 문서가 있습니다. 한 곳에 모아 두었습니다.', 'legal.cta': '전체 보기',
-      'footer.tag': 'iOS와 Android 앱을 만듭니다.',
-      'footer.note': '이 사이트는 쿠키와 분석 도구를 쓰지 않습니다.',
-      'footer.col.site': '사이트', 'footer.col.store': '스토어',
-      'footer.play': 'Google Play 개발자 페이지', 'footer.appstore': 'App Store 개발자 페이지',
-      'footer.github': 'GitHub', 'footer.top': '맨 위로',
-      'link.website': '웹사이트', 'link.instagram': '인스타그램', 'link.privacy': '개인정보 처리방침', 'link.terms': '이용약관', 'link.support': '지원', 'link.contact': '문의',
-      'status.live': '출시', 'status.review': '심사 중', 'status.soon': '준비 중',
-      'sp.eyebrow': '지원', 'sp.h': '도움이 필요하신가요?',
-      'sp.lede': '모든 앱의 문의는 이메일로 받습니다. 만든 사람이 직접 읽고, 보통 며칠 안에 답합니다.',
-      'sp.tip': '빠른 답변을 위해: <b>앱 이름, 기기와 OS 버전, 앱 버전, 문제가 생기는 순서</b>를 적어 주세요. 스크린샷이 있으면 더 좋습니다.',
-      'sp.perapp': '앱별 지원 페이지', 'sp.perapp.sub': '앱마다 지원 페이지나 개인정보 처리방침이 있으면 함께 적었습니다. 문의는 어느 앱이든 {email} 로 보내 주세요. 앱 이름, 기기와 OS 버전, 문제가 생기는 순서를 함께 적으면 빨리 답할 수 있습니다.', 'sp.faq': '자주 묻는 질문',
-      'faq1.q': '구매한 Pro(광고 제거)가 다시 잠겼어요',
-      'faq1.a': '앱 설정의 <b>구매 복원</b>을 눌러 주세요. 구매할 때 쓴 것과 같은 Apple 계정(또는 Google 계정)으로 로그인돼 있어야 합니다. 그래도 안 되면 영수증과 함께 {email} 로 메일 주세요.',
-      'faq2.q': '환불은 어떻게 하나요?',
-      'faq2.a': '결제는 Apple 과 Google 이 처리하므로 환불도 스토어에 요청합니다. App Store 는 <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>, Google Play 는 <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Play 환불 요청</a>에서 진행하세요. 스토어가 거절한 경우 메일로 알려 주시면 확인해 드립니다.',
-      'faq3.q': '광고 개인화를 끄고 싶어요',
-      'faq3.a': 'iPhone: 설정 → 개인정보 보호 및 보안 → 추적에서 앱의 추적을 끌 수 있습니다. Android: 설정 → Google → 광고에서 광고 ID 를 재설정하거나 삭제할 수 있습니다. 광고가 있는 앱은 앱 안의 설정에서 동의 화면을 다시 열 수 있습니다. 기능은 어느 쪽을 선택해도 똑같이 동작합니다.',
-      'faq4.q': '내 데이터를 삭제하고 싶어요',
-      'faq4.a': '대부분의 앱은 데이터를 기기에만 저장하므로 앱을 삭제하면 함께 지워집니다. 계정이나 서버를 쓰는 앱(FX AI, ClipStash)은 {email} 로 앱 이름과 계정 정보를 적어 삭제를 요청해 주세요.',
-      'faq5.q': '버그 제보나 기능 제안은 어디로 하나요?',
-      'faq5.a': '{email} 로 보내 주세요. 제목에 앱 이름을 적어 주시면 찾기 쉽습니다. 번역이 어색한 부분을 알려 주시는 것도 큰 도움이 됩니다.',
-      'pp.eyebrow': '법적 고지', 'pp.h': '개인정보 처리방침 · 이용약관',
-      'pp.lede': '앱마다 별도 문서를 둡니다. 아래 표에서 앱을 찾아 주세요. 문서가 없는 칸은 해당 앱에 그 문서가 없다는 뜻입니다.',
-      'pp.col.app': '앱', 'pp.col.privacy': '개인정보 처리방침', 'pp.col.terms': '이용약관', 'pp.col.support': '지원', 'pp.col.contact': '문의',
-      'pp.view': '보기',
-      'pp.site.h': '이 웹사이트에 대하여',
-      'pp.site.p1': 'dsm0829.github.io 는 GitHub Pages 로 호스팅되는 정적 사이트입니다. 쿠키를 쓰지 않고, 방문자 분석 도구도 넣지 않았습니다.',
-      'shots.alt': '스크린샷',
-      'pp.site.p2': '서버 접속 기록은 호스팅 사업자인 GitHub 의 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">개인정보 정책</a>을 따릅니다. 글꼴은 Google Fonts 에서 불러오며, 이때 브라우저가 Google 서버에 접속합니다. 선택한 언어(한국어/English)는 브라우저의 localStorage 에만 저장되고 어디로도 전송되지 않습니다.',
-      'pp.site.p3': '이 사이트나 앱의 개인정보에 관한 문의:',
-      'nf.eyebrow': '404', 'nf.h': '페이지를 찾을 수 없습니다', 'nf.p': '주소가 바뀌었거나 없는 페이지입니다. 앱 목록은 홈에서 볼 수 있습니다.', 'nf.home': '홈으로', 'nf.support': '지원 페이지'
-    },
     en: {
       'title.home': 'VISM STUDIO',
       'title.support': 'Support — VISM STUDIO',
@@ -114,35 +61,25 @@
       'pp.site.h': 'About this website',
       'pp.site.p1': 'dsm0829.github.io is a static site hosted on GitHub Pages. It sets no cookies and runs no analytics.',
       'shots.alt': 'screenshot',
-      'pp.site.p2': 'Server logs are governed by GitHub’s <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">privacy statement</a> as the hosting provider. Fonts load from Google Fonts, which means your browser contacts Google’s servers. Your language choice (한국어/English) is stored only in your browser’s localStorage and is never sent anywhere.',
+      'pp.site.p2': 'Server logs are governed by GitHub’s <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">privacy statement</a> as the hosting provider. Fonts load from Google Fonts, which means your browser contacts Google’s servers.',
       'pp.site.p3': 'Privacy questions about this site or any app:',
       'nf.eyebrow': '404', 'nf.h': 'Page not found', 'nf.p': 'The address may have changed or never existed. The app list is on the home page.', 'nf.home': 'Go home', 'nf.support': 'Support page'
     }
   };
 
   /* ---------- language ---------- */
-  function detectLang() {
-    // 1) URL ?lang=ko|en (공유 링크용) 2) 사용자가 직접 고른 값
-    // 기기 언어는 보지 않는다 — 기본은 항상 영어. 한국어는 토글로만 바뀐다.
-    try {
-      var q = (location.search.match(/[?&]lang=(ko|en)\b/) || [])[1];
-      if (q) { try { localStorage.setItem('vism-lang', q); } catch (e0) {} return q; }
-    } catch (e1) {}
-    try { var s = localStorage.getItem('vism-lang'); if (s === 'ko' || s === 'en') return s; } catch (e) {}
-    return 'en';
-  }
-  var lang = detectLang();
+  // 이 사이트는 영어 전용이다. 언어 토글과 기기 언어 감지를 두지 않는다.
+  var lang = 'en';
   function t(key) {
-    var d = I18N[lang] || I18N.en, v;
-    if (Object.prototype.hasOwnProperty.call(d, key)) v = d[key];
-    else if (Object.prototype.hasOwnProperty.call(I18N.en, key)) v = I18N.en[key];
+    var v;
+    if (Object.prototype.hasOwnProperty.call(I18N.en, key)) v = I18N.en[key];
     else return key;
     return v.replace(/\{email\}/g, SITE.email);
   }
-  function L(v) { // {ko,en} 또는 문자열
+  function L(v) { // apps.js 는 {ko,en} 형태를 유지한다 — 영어만 꺼내 쓴다
     if (v == null) return '';
     if (typeof v === 'string') return v;
-    return v[lang] || v.en || v.ko || '';
+    return v.en || v.ko || '';
   }
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
@@ -166,8 +103,6 @@
         if (p.length === 2) els[i].setAttribute(p[0].trim(), t(p[1].trim()));
       }
     }
-    els = document.querySelectorAll('[data-lang-btn]');
-    for (i = 0; i < els.length; i++) els[i].setAttribute('aria-pressed', els[i].getAttribute('data-lang-btn') === lang ? 'true' : 'false');
     els = document.querySelectorAll('[data-email]');
     for (i = 0; i < els.length; i++) {
       els[i].setAttribute('href', 'mailto:' + SITE.email);
@@ -322,16 +257,6 @@
     startRotator();
   }
 
-  /* ---------- events ---------- */
-  document.addEventListener('click', function (e) {
-    var b = e.target.closest && e.target.closest('[data-lang-btn]');
-    if (!b) return;
-    var next = b.getAttribute('data-lang-btn');
-    if (next !== 'ko' && next !== 'en') return;
-    lang = next;
-    try { localStorage.setItem('vism-lang', lang); } catch (err) {}
-    renderAll();
-  });
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', renderAll);
   else renderAll();

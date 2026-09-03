@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,49 +10,45 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
-<title data-i18n="title.support">지원 — VISM STUDIO</title>
-<meta name="description" content="VISM STUDIO 앱 지원 — 문의 이메일, 앱별 지원 페이지, 자주 묻는 질문. Support for VISM STUDIO apps: contact, per-app support pages, FAQ.">
+<title data-i18n="title.support">Support — VISM STUDIO</title>
+<meta name="description" content="Support for VISM STUDIO apps: contact, per-app support pages, FAQ.">
 <link rel="canonical" href="https://dsm0829.github.io/support/">
 <meta property="og:title" content="Support — VISM STUDIO">
 <meta property="og:url" content="https://dsm0829.github.io/support/">
 <meta property="og:image" content="https://dsm0829.github.io/assets/og.png">
 </head>
 <body>
-<a class="skip" href="#main" data-i18n="a11y.skip">본문으로 건너뛰기</a>
+<a class="skip" href="#main" data-i18n="a11y.skip">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/" aria-label="VISM STUDIO">
       <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" style="fill:var(--accent)"/><path d="M8.5 10.5 16 23l7.5-12.5" fill="none" style="stroke:var(--accent-ink)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <b>VISM STUDIO</b>
     </a>
-    <nav class="nav" data-i18n-attr="aria-label:a11y.nav" aria-label="주 메뉴">
-      <a href="/#apps" data-i18n="nav.apps">앱</a>
-      <a href="/support/" data-i18n="nav.support" aria-current="page">지원</a>
-      <a href="/privacy/" data-i18n="nav.privacy">개인정보</a>
+    <nav class="nav" data-i18n-attr="aria-label:a11y.nav" aria-label="Main menu">
+      <a href="/#apps" data-i18n="nav.apps">Apps</a>
+      <a href="/support/" data-i18n="nav.support" aria-current="page">Support</a>
+      <a href="/privacy/" data-i18n="nav.privacy">Privacy</a>
     </nav>
-    <div class="lang" role="group" data-i18n-attr="aria-label:a11y.lang" aria-label="언어 선택">
-      <button type="button" data-lang-btn="ko" aria-pressed="true">한국어</button>
-      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
-    </div>
   </div>
 </header>
 <main id="main">
   <section class="section" aria-labelledby="perapp-h">
     <div class="wrap">
-      <h1 id="perapp-h" data-i18n="sp.perapp">앱별 지원 페이지</h1>
-      <p class="sub" style="margin-bottom:20px" data-i18n="sp.perapp.sub">앱마다 지원 페이지나 개인정보 처리방침이 있으면 함께 적었습니다.</p>
+      <h1 id="perapp-h" data-i18n="sp.perapp">Support by app</h1>
+      <p class="sub" style="margin-bottom:20px" data-i18n="sp.perapp.sub">Where an app has its own support page or privacy policy, it is listed here. For any app, email {email} — include the app name, device and OS version, and the steps that trigger the problem for a faster answer.</p>
       <div class="support-list" data-render="support-list"></div>
     </div>
   </section>
   <section class="section" aria-labelledby="faq-h">
     <div class="wrap">
-      <h2 id="faq-h" style="margin-bottom:16px" data-i18n="sp.faq">자주 묻는 질문</h2>
+      <h2 id="faq-h" style="margin-bottom:16px" data-i18n="sp.faq">Common questions</h2>
       <div class="faq">
-        <details><summary data-i18n="faq1.q"></summary><div class="answer" data-i18n-html="faq1.a"></div></details>
-        <details><summary data-i18n="faq2.q"></summary><div class="answer" data-i18n-html="faq2.a"></div></details>
-        <details><summary data-i18n="faq3.q"></summary><div class="answer" data-i18n-html="faq3.a"></div></details>
-        <details><summary data-i18n="faq4.q"></summary><div class="answer" data-i18n-html="faq4.a"></div></details>
-        <details><summary data-i18n="faq5.q"></summary><div class="answer" data-i18n-html="faq5.a"></div></details>
+        <details><summary data-i18n="faq1.q">I bought Pro (ad removal) but it is locked again</summary><div class="answer" data-i18n-html="faq1.a">Open the app’s settings and tap <b>Restore purchases</b>. Make sure you are signed in with the same Apple Account (or Google account) you used to buy. If that fails, email {email} with your receipt.</div></details>
+        <details><summary data-i18n="faq2.q">How do I get a refund?</summary><div class="answer" data-i18n-html="faq2.a">Payments are processed by Apple and Google, so refunds go through the store. For the App Store use <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>; for Google Play use the <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Play refund request</a>. If the store declines, email us and we will look into it.</div></details>
+        <details><summary data-i18n="faq3.q">How do I turn off ad personalization?</summary><div class="answer" data-i18n-html="faq3.a">iPhone: Settings → Privacy & Security → Tracking lets you turn off tracking per app. Android: Settings → Google → Ads lets you reset or delete your advertising ID. Apps with ads also let you reopen the consent form from their in-app settings. Every feature works the same either way.</div></details>
+        <details><summary data-i18n="faq4.q">How do I delete my data?</summary><div class="answer" data-i18n-html="faq4.a">Most of our apps keep data only on your device, so deleting the app deletes the data. For apps that use an account or a server (FX AI, ClipStash), email {email} with the app name and your account details to request deletion.</div></details>
+        <details><summary data-i18n="faq5.q">Where do I report a bug or suggest a feature?</summary><div class="answer" data-i18n-html="faq5.a">Email {email}. Put the app name in the subject line so it is easy to find. Pointing out awkward translations also helps a lot.</div></details>
       </div>
     </div>
   </section>
@@ -61,23 +57,23 @@
   <div class="wrap">
     <div>
       <a class="brand" href="/"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" style="fill:var(--accent)"/><path d="M8.5 10.5 16 23l7.5-12.5" fill="none" style="stroke:var(--accent-ink)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>VISM STUDIO</b></a>
-      <p data-i18n="footer.tag">iOS와 Android 앱을 만듭니다.</p>
+      <p data-i18n="footer.tag">Making apps for iOS and Android.</p>
       <p class="legal-line">© <span data-year>2026</span> VISM STUDIO · YOU SEUNGMIN · <a href="mailto:tmdals999@gmail.com" data-email data-email-text>tmdals999@gmail.com</a></p>
-      <p class="note" data-i18n="footer.note">이 사이트는 쿠키와 분석 도구를 쓰지 않습니다.</p>
+      <p class="note" data-i18n="footer.note">This site uses no cookies and no analytics.</p>
     </div>
     <div class="cols">
       <div>
-        <h4 data-i18n="footer.col.site">사이트</h4>
-        <a href="/#apps" data-i18n="nav.apps">앱</a>
-        <a href="/support/" data-i18n="nav.support">지원</a>
-        <a href="/privacy/" data-i18n="nav.privacy">개인정보</a>
+        <h4 data-i18n="footer.col.site">Site</h4>
+        <a href="/#apps" data-i18n="nav.apps">Apps</a>
+        <a href="/support/" data-i18n="nav.support">Support</a>
+        <a href="/privacy/" data-i18n="nav.privacy">Privacy</a>
         <a href="https://github.com/dSM0829" target="_blank" rel="noopener" data-i18n="footer.github">GitHub</a>
       </div>
       <div>
-        <h4 data-i18n="footer.col.store">스토어</h4>
-        <a href="https://play.google.com/store/apps/developer?id=VISM+STUDIO" target="_blank" rel="noopener" data-i18n="footer.play">Google Play 개발자 페이지</a>
-        <a href="https://apps.apple.com/developer/id1884590037" target="_blank" rel="noopener" data-i18n="footer.appstore">App Store 개발자 페이지</a>
-        <a href="#main" data-i18n="footer.top">맨 위로</a>
+        <h4 data-i18n="footer.col.store">Stores</h4>
+        <a href="https://play.google.com/store/apps/developer?id=VISM+STUDIO" target="_blank" rel="noopener" data-i18n="footer.play">Google Play developer page</a>
+        <a href="https://apps.apple.com/developer/id1884590037" target="_blank" rel="noopener" data-i18n="footer.appstore">App Store developer page</a>
+        <a href="#main" data-i18n="footer.top">Back to top</a>
       </div>
     </div>
   </div>
