@@ -26,7 +26,7 @@ window.VISM_APPS = [
     icon: '/assets/icons/tvremote.png',
     shots: ['/assets/shots/tvremote/1.jpg', '/assets/shots/tvremote/2.jpg', '/assets/shots/tvremote/3.jpg'],
     platforms: {
-      ios:     { status: 'review', url: 'https://apps.apple.com/app/id6805628220' },
+      ios:     { status: 'live',   url: 'https://apps.apple.com/app/id6805628220' },
       android: { status: 'live',   url: 'https://play.google.com/store/apps/details?id=com.vism.tvremote' }
     },
     links: {
@@ -125,7 +125,7 @@ window.VISM_APPS = [
     icon: '/assets/icons/creatormix.png',
     shots: ['/assets/shots/creatormix/1.jpg', '/assets/shots/creatormix/2.jpg', '/assets/shots/creatormix/3.jpg', '/assets/shots/creatormix/4.jpg'],
     platforms: {
-      ios:     { status: 'review', url: 'https://apps.apple.com/app/id6799359766' },
+      ios:     { status: 'soon' },
       android: { status: 'live',   url: 'https://play.google.com/store/apps/details?id=digital.creatormix.app' }
     },
     links: {
@@ -145,7 +145,7 @@ window.VISM_APPS = [
     icon: '/assets/icons/keepmemory.png',
     shots: ['/assets/shots/keepmemory/1.jpg', '/assets/shots/keepmemory/2.jpg', '/assets/shots/keepmemory/3.jpg'],
     platforms: {
-      ios:     { status: 'review', url: 'https://apps.apple.com/app/id6803499711' },
+      ios:     { status: 'live',   url: 'https://apps.apple.com/app/id6803499711' },
       android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.spaceback.app' }
     },
     links: {
@@ -204,7 +204,7 @@ window.VISM_APPS = [
     icon: '/assets/icons/brickid.png',
     shots: ['/assets/shots/brickid/1.jpg', '/assets/shots/brickid/2.jpg', '/assets/shots/brickid/3.jpg', '/assets/shots/brickid/4.jpg'],
     platforms: {
-      ios: { status: 'soon' }
+      ios: { status: 'live', url: 'https://apps.apple.com/app/id6807828421' }
     },
     links: {
       support: 'https://dsm0829.github.io/brickid-privacy/support.html',
