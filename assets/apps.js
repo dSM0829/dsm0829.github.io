@@ -204,7 +204,8 @@ window.VISM_APPS = [
     icon: '/assets/icons/brickid.png',
     shots: ['/assets/shots/brickid/1.jpg', '/assets/shots/brickid/2.jpg', '/assets/shots/brickid/3.jpg', '/assets/shots/brickid/4.jpg'],
     platforms: {
-      ios: { status: 'live', url: 'https://apps.apple.com/app/id6807828421' }
+      ios:     { status: 'live', url: 'https://apps.apple.com/app/id6807828421' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.brickdex' }
     },
     links: {
       support: 'https://dsm0829.github.io/brickid-privacy/support.html',
