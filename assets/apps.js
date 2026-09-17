@@ -97,20 +97,21 @@ window.VISM_APPS = [
   {
     id: 'dayluck',
     name: { ko: '데이럭', en: 'DayLuck' },
-    storeName: { ko: '데이럭 - 사주로 보는 좋은 날, 운세, 궁합, 만세력', en: 'DayLuck' },
-    category: { ko: '사주 · 운세 · 라이프스타일', en: 'Saju fortune · Lifestyle' },
+    storeName: { ko: '데이럭 — 사주로 보는 너와 나의 좋은 날', en: 'DayLuck — saju and tarot on the web' },
+    category: { ko: '사주 · 타로 · 웹 서비스', en: 'Saju & tarot · Web' },
     tagline: {
-      ko: '사주로 보는 오늘의 운세와 이달의 좋은 날, 약속 날짜 운세, 친구 궁합, 만세력까지 매일 받아 봅니다.',
-      en: 'Daily fortune from your Saju, auspicious days this month, appointment-date readings, friend compatibility and a manseryeok calendar.'
+      ko: '설치 없이 웹에서 보는 사주와 타로. 오늘의 운세와 오늘의 카드는 무료, 사주풀이는 990원부터. 한국어 서비스입니다.',
+      en: 'Saju (Korean fortune telling) and tarot in the browser — nothing to install. The daily fortune and one tarot card a day are free; a full reading starts at ₩990. Korean only.'
     },
     icon: '/assets/icons/dayluck.png',
-    shots: ['/assets/shots/dayluck/1.jpg', '/assets/shots/dayluck/2.jpg', '/assets/shots/dayluck/3.jpg', '/assets/shots/dayluck/4.jpg'],
+    shots: ['/assets/shots/dayluck/1.jpg', '/assets/shots/dayluck/2.jpg', '/assets/shots/dayluck/3.jpg'],
     platforms: {
-      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.dayluck.app' }
+      web: { status: 'live', url: 'https://dayluck.today' }
     },
     links: {
       instagram: 'https://www.instagram.com/dayluck_official',
-      privacy: 'https://classic-eel-26a.notion.site/DAYLUCK-39b6f2bb1ae78166b9a2dc0a30844fe5'
+      privacy: 'https://dayluck.today/legal/privacy',
+      terms: 'https://dayluck.today/legal/terms'
     }
   },
   {
