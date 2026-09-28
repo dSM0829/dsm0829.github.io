@@ -42,3 +42,14 @@ favicon.svg · robots.txt · sitemap.xml · app-ads.txt · .nojekyll
 python3 -m http.server 8765 --directory .
 ```
 → http://localhost:8765/ (절대 경로 `/assets/...` 를 쓰므로 루트에서 띄워야 합니다)
+
+## 공장 앱 개인정보처리방침 규칙 (2026-09-28 사용자 확정)
+
+새 앱은 이 규칙대로 만들어 바로 push 한다(매번 따로 묻지 않음).
+
+- 주소: `dsm0829.github.io/<앱>-privacy/` — 폴더에 `index.html` 파일 하나
+- 한 페이지에 영어와 한국어를 함께 쓴다(항목마다 영어 → `<br>` → 한국어)
+- 항목: 요약 / 앱이 다루는 데이터 / 앱 고유 기능(알림·백업 등) / 광고(AdMob, 광고가 나오는 화면, 추적 허용, 유럽 동의) / 구입 / 데이터 삭제 / 아동 / 문의(tmdals999@gmail.com)
+- 내용은 그 앱 코드에서 확인한 사실만: 어떤 데이터를 어디에 저장하는지, 어떤 SDK 를 쓰는지, 광고가 어느 화면에 나오는지
+- 출시 전에는 홈·허브·sitemap 에 넣지 않고, 출시할 때 `assets/apps.js` 에 추가한다
+- 같은 주소를 그 앱의 AdMob 유럽 규정 메시지(개인정보처리방침 URL)에도 넣는다
