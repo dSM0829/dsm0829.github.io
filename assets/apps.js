@@ -15,6 +15,272 @@
    ===================================================================== */
 window.VISM_APPS = [
   {
+    id: 'tuner',
+    name: { ko: 'Tuner', en: 'Tuner' },
+    storeName: { ko: 'Tuner: Guitar, Ukulele & Bass', en: 'Tuner: Guitar, Ukulele & Bass' },
+    category: { ko: 'Tuner · Music', en: 'Tuner · Music' },
+    tagline: {
+      ko: 'Tuner is a guitar tuner that listens through your microphone and shows you, string by string, whether to tighten or loosen. It also tunes bass, ukulele, violin, cello, banjo and mandolin, and has a metronome built in.',
+      en: 'Tuner is a guitar tuner that listens through your microphone and shows you, string by string, whether to tighten or loosen. It also tunes bass, ukulele, violin, cello, banjo and mandolin, and has a metronome built in.'
+    },
+    icon: '/assets/icons/tuner.png',
+    shots: ['/assets/shots/tuner/1.jpg', '/assets/shots/tuner/2.jpg', '/assets/shots/tuner/3.jpg', '/assets/shots/tuner/4.jpg'],
+    platforms: {
+      ios:     { status: 'live', url: 'https://apps.apple.com/app/id6815243073' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.vismstudio.tuner' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/tuner-privacy/'
+    }
+  },
+  {
+    id: 'pdfx',
+    name: { ko: 'PDFX', en: 'PDFX' },
+    storeName: { ko: 'PDFX: Editor, Reader & Signer', en: 'PDFX: Editor, Reader & Signer' },
+    category: { ko: 'PDF editor · Documents', en: 'PDF editor · Documents' },
+    tagline: {
+      ko: 'PDFX opens your PDFs so you can read, mark up, sign and fill them on your phone. There is no account and no server: files are opened, edited and recognized on your device, and your original file is never changed.',
+      en: 'PDFX opens your PDFs so you can read, mark up, sign and fill them on your phone. There is no account and no server: files are opened, edited and recognized on your device, and your original file is never changed.'
+    },
+    icon: '/assets/icons/pdfx.png',
+    shots: ['/assets/shots/pdfx/1.jpg', '/assets/shots/pdfx/2.jpg', '/assets/shots/pdfx/3.jpg', '/assets/shots/pdfx/4.jpg'],
+    platforms: {
+      ios:     { status: 'live', url: 'https://apps.apple.com/app/id6815243882' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.vismstudio.pdf' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/pdfx-privacy/'
+    }
+  },
+  {
+    id: 'scanner',
+    name: { ko: 'Scanner', en: 'Scanner' },
+    storeName: { ko: 'Scanner: PDF & Document Scan', en: 'Scanner: PDF & Document Scan' },
+    category: { ko: 'Document scanner · Utilities', en: 'Document scanner · Utilities' },
+    tagline: {
+      ko: 'Scanner turns paper into clean PDFs with your phone camera. Point it at a page, and Scanner finds the edges, straightens the page and takes the picture when you hold still.',
+      en: 'Scanner turns paper into clean PDFs with your phone camera. Point it at a page, and Scanner finds the edges, straightens the page and takes the picture when you hold still.'
+    },
+    icon: '/assets/icons/scanner.png',
+    shots: ['/assets/shots/scanner/1.jpg', '/assets/shots/scanner/2.jpg', '/assets/shots/scanner/3.jpg', '/assets/shots/scanner/4.jpg'],
+    platforms: {
+      ios:     { status: 'live', url: 'https://apps.apple.com/app/id6815859133' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.vismstudio.scanner' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/scanner-privacy/'
+    }
+  },
+  {
+    id: 'printer',
+    name: { ko: 'Printer', en: 'Printer' },
+    storeName: { ko: 'Printer: Print & Scan Photos', en: 'Printer: Print & Scan Photos' },
+    category: { ko: 'Printing · Utilities', en: 'Printing · Utilities' },
+    tagline: {
+      ko: 'Printer gets your photos, files and web pages ready for paper and sends them to the Wi-Fi printer next to you.',
+      en: 'Printer gets your photos, files and web pages ready for paper and sends them to the Wi-Fi printer next to you.'
+    },
+    icon: '/assets/icons/printer.png',
+    shots: ['/assets/shots/printer/1.jpg', '/assets/shots/printer/2.jpg', '/assets/shots/printer/3.jpg', '/assets/shots/printer/4.jpg'],
+    platforms: {
+      ios:     { status: 'live', url: 'https://apps.apple.com/app/id6816224646' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.vismstudio.printer' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/printer-privacy/'
+    }
+  },
+  {
+    id: 'spreadsheet',
+    name: { ko: 'Spreadsheet', en: 'Spreadsheet' },
+    storeName: { ko: 'Spreadsheet: XLSX & CSV Editor', en: 'Spreadsheet: XLSX & CSV Editor' },
+    category: { ko: 'Spreadsheet · Documents', en: 'Spreadsheet · Documents' },
+    tagline: {
+      ko: 'Spreadsheet lets you open, edit and save spreadsheets on your phone. Open XLSX and CSV files from the Files app or another app, change a cell and the change is saved right away. No account, no sign-in.',
+      en: 'Spreadsheet lets you open, edit and save spreadsheets on your phone. Open XLSX and CSV files from the Files app or another app, change a cell and the change is saved right away. No account, no sign-in.'
+    },
+    icon: '/assets/icons/spreadsheet.png',
+    shots: ['/assets/shots/spreadsheet/1.jpg', '/assets/shots/spreadsheet/2.jpg', '/assets/shots/spreadsheet/3.jpg', '/assets/shots/spreadsheet/4.jpg'],
+    platforms: {
+      ios:     { status: 'live', url: 'https://apps.apple.com/app/id6816473520' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.vismstudio.spreadsheet' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/spreadsheet-privacy/'
+    }
+  },
+  {
+    id: 'vintage',
+    name: { ko: 'Vintage', en: 'Vintage' },
+    storeName: { ko: 'Vintage: Film Camera & Lenses', en: 'Vintage: Film Camera & Lenses' },
+    category: { ko: 'Film camera · Photo', en: 'Film camera · Photo' },
+    tagline: {
+      ko: 'Vintage is a film camera you build yourself. Pick a body, put on a lens, load a film and shoot — the viewfinder shows the result live, so what you see is what you get.',
+      en: 'Vintage is a film camera you build yourself. Pick a body, put on a lens, load a film and shoot — the viewfinder shows the result live, so what you see is what you get.'
+    },
+    icon: '/assets/icons/vintage.png',
+    shots: ['/assets/shots/vintage/1.jpg', '/assets/shots/vintage/2.jpg', '/assets/shots/vintage/3.jpg', '/assets/shots/vintage/4.jpg'],
+    platforms: {
+      ios:     { status: 'live', url: 'https://apps.apple.com/app/id6816281510' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.vismstudio.vintage' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/vintage-privacy/'
+    }
+  },
+  {
+    id: 'ear',
+    name: { ko: 'Ear Training', en: 'Ear Training' },
+    storeName: { ko: 'Ear Training: Chords & Scales', en: 'Ear Training: Chords & Scales' },
+    category: { ko: 'Ear training · Music', en: 'Ear training · Music' },
+    tagline: {
+      ko: 'Ear Training helps you name what you hear. Listen, pick the name, and see right away if you got it. Missed it? You hear the right answer again from the same note, and you can tap the other buttons to compare. Short lessons, a real piano sound, and no account.',
+      en: 'Ear Training helps you name what you hear. Listen, pick the name, and see right away if you got it. Missed it? You hear the right answer again from the same note, and you can tap the other buttons to compare. Short lessons, a real piano sound, and no account.'
+    },
+    icon: '/assets/icons/ear.png',
+    shots: ['/assets/shots/ear/1.jpg', '/assets/shots/ear/2.jpg', '/assets/shots/ear/3.jpg', '/assets/shots/ear/4.jpg'],
+    platforms: {
+      ios:     { status: 'live', url: 'https://apps.apple.com/app/id6818875288' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.vismstudio.ear' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/ear-privacy/'
+    }
+  },
+  {
+    id: 'affirm',
+    name: { ko: 'I can', en: 'I can' },
+    storeName: { ko: 'I can: Affirmations & Quotes', en: 'I can: Affirmations & Quotes' },
+    category: { ko: 'Affirmations · Lifestyle', en: 'Affirmations · Lifestyle' },
+    tagline: {
+      ko: 'I can brings you one short sentence at a time: an affirmation to say to yourself, or a quote from someone who said it first.',
+      en: 'I can brings you one short sentence at a time: an affirmation to say to yourself, or a quote from someone who said it first.'
+    },
+    icon: '/assets/icons/affirm.png',
+    shots: ['/assets/shots/affirm/1.jpg', '/assets/shots/affirm/2.jpg', '/assets/shots/affirm/3.jpg', '/assets/shots/affirm/4.jpg'],
+    platforms: {
+      ios:     { status: 'live', url: 'https://apps.apple.com/app/id6819462574' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.vismstudio.affirm' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/affirm-privacy/'
+    }
+  },
+  {
+    id: 'mail',
+    name: { ko: 'Email', en: 'Email' },
+    storeName: { ko: 'Email: All Your Mail in One', en: 'Email: All Your Mail in One' },
+    category: { ko: 'Email client · Productivity', en: 'Email client · Productivity' },
+    tagline: {
+      ko: 'Email puts all your mail in one inbox: Gmail, iCloud, Naver, Daum, Yahoo and other IMAP accounts. Your phone talks to your mail provider directly. Your mail and passwords never go through our servers, because there are none.',
+      en: 'Email puts all your mail in one inbox: Gmail, iCloud, Naver, Daum, Yahoo and other IMAP accounts. Your phone talks to your mail provider directly. Your mail and passwords never go through our servers, because there are none.'
+    },
+    icon: '/assets/icons/mail.png',
+    shots: ['/assets/shots/mail/1.jpg', '/assets/shots/mail/2.jpg', '/assets/shots/mail/3.jpg', '/assets/shots/mail/4.jpg'],
+    platforms: {
+      ios:     { status: 'soon' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.vismstudio.mail' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/mail-privacy/'
+    }
+  },
+  {
+    id: 'card',
+    name: { ko: 'Card Scanner', en: 'Card Scanner' },
+    storeName: { ko: 'Card Scanner: Business Cards', en: 'Card Scanner: Business Cards' },
+    category: { ko: 'Business cards · Productivity', en: 'Business cards · Productivity' },
+    tagline: {
+      ko: 'Card Scanner turns paper business cards into contacts you can use.',
+      en: 'Card Scanner turns paper business cards into contacts you can use.'
+    },
+    icon: '/assets/icons/card.png',
+    shots: ['/assets/shots/card/1.jpg', '/assets/shots/card/2.jpg', '/assets/shots/card/3.jpg', '/assets/shots/card/4.jpg'],
+    platforms: {
+      ios:     { status: 'soon' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.vismstudio.card' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/card-privacy/'
+    }
+  },
+  {
+    id: 'gym',
+    name: { ko: 'Gym Workout', en: 'Gym Workout' },
+    storeName: { ko: 'Gym Workout: Tracker & Log', en: 'Gym Workout: Tracker & Log' },
+    category: { ko: 'Workout log · Health', en: 'Workout log · Health' },
+    tagline: {
+      ko: 'Gym Workout is a simple workout log for the gym. Open the app and start logging. There\'s no account and no sign-up, and it works offline.',
+      en: 'Gym Workout is a simple workout log for the gym. Open the app and start logging. There\'s no account and no sign-up, and it works offline.'
+    },
+    icon: '/assets/icons/gym.png',
+    shots: ['/assets/shots/gym/1.jpg', '/assets/shots/gym/2.jpg', '/assets/shots/gym/3.jpg', '/assets/shots/gym/4.jpg'],
+    platforms: {
+      ios:     { status: 'soon' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.vismstudio.gym' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/gym-privacy/'
+    }
+  },
+  {
+    id: 'hwp',
+    name: { ko: 'HWP Viewer', en: 'HWP Viewer' },
+    storeName: { ko: 'HWP Viewer: Open & Edit Hangul', en: 'HWP Viewer: Open & Edit Hangul' },
+    category: { ko: 'HWP viewer · Documents', en: 'HWP viewer · Documents' },
+    tagline: {
+      ko: 'Open and edit Korean word processor documents (.hwp and .hwpx) on your phone — school notices, government letters, forms and announcements.',
+      en: 'Open and edit Korean word processor documents (.hwp and .hwpx) on your phone — school notices, government letters, forms and announcements.'
+    },
+    icon: '/assets/icons/hwp.png',
+    shots: ['/assets/shots/hwp/1.jpg', '/assets/shots/hwp/2.jpg', '/assets/shots/hwp/3.jpg', '/assets/shots/hwp/4.jpg'],
+    platforms: {
+      ios:     { status: 'soon' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.vismstudio.hwp' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/hwp-privacy/'
+    }
+  },
+  {
+    id: 'docx',
+    name: { ko: 'Docx', en: 'Docx' },
+    storeName: { ko: 'Docx: Open & Edit Documents', en: 'Docx: Open & Edit Documents' },
+    category: { ko: 'DOCX editor · Documents', en: 'DOCX editor · Documents' },
+    tagline: {
+      ko: 'Open, read and edit DOCX documents on your phone. Pages are laid out like on a computer, and your changes are saved back in the same DOCX format. No account, no sign-in.',
+      en: 'Open, read and edit DOCX documents on your phone. Pages are laid out like on a computer, and your changes are saved back in the same DOCX format. No account, no sign-in.'
+    },
+    icon: '/assets/icons/docx.png',
+    shots: ['/assets/shots/docx/1.jpg', '/assets/shots/docx/2.jpg', '/assets/shots/docx/3.jpg', '/assets/shots/docx/4.jpg'],
+    platforms: {
+      ios:     { status: 'soon' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.vismstudio.docx' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/docx-privacy/'
+    }
+  },
+  {
+    id: 'unzip',
+    name: { ko: 'Unzip', en: 'Unzip' },
+    storeName: { ko: 'Unzip: RAR, 7Z & ZIP Extractor', en: 'Unzip: RAR, 7Z & ZIP Extractor' },
+    category: { ko: 'Archives · Utilities', en: 'Archives · Utilities' },
+    tagline: {
+      ko: 'Open RAR, 7Z, ZIP and other archives on your phone, see what\'s inside, and extract all or just the files you need. No account, no sign-in.',
+      en: 'Open RAR, 7Z, ZIP and other archives on your phone, see what\'s inside, and extract all or just the files you need. No account, no sign-in.'
+    },
+    icon: '/assets/icons/unzip.png',
+    shots: ['/assets/shots/unzip/1.jpg', '/assets/shots/unzip/2.jpg', '/assets/shots/unzip/3.jpg', '/assets/shots/unzip/4.jpg'],
+    platforms: {
+      ios:     { status: 'soon' },
+      android: { status: 'live', url: 'https://play.google.com/store/apps/details?id=com.vismstudio.unzip' }
+    },
+    links: {
+      privacy: 'https://dsm0829.github.io/unzip-privacy/'
+    }
+  },
+  {
     id: 'tvremote',
     name: { ko: 'Universal TV 리모컨', en: 'Universal TV Remote' },
     storeName: { ko: 'Universal: 만능 TV 리모컨', en: 'Universal: TV Remote Control' },
@@ -186,7 +452,6 @@ window.VISM_APPS = [
     icon: '/assets/icons/holofoil.png',
     shots: ['/assets/shots/holofoil/1.jpg', '/assets/shots/holofoil/2.jpg', '/assets/shots/holofoil/3.jpg', '/assets/shots/holofoil/4.jpg'],
     platforms: {
-      ios:     { status: 'review', url: 'https://apps.apple.com/app/id6806115174' },
       android: { status: 'live',   url: 'https://play.google.com/store/apps/details?id=com.holofoil.card' }
     },
     links: {

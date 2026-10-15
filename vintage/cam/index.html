@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vintage camera</title>
+<meta name="robots" content="noindex">
+<style>
+:root{--bg:#0b0a09;--card:#1c1916;--text:#f4e9d6;--muted:#a39a8c;--amb:#f2a33a;--ink:#141210}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,system-ui,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;padding:16px;box-sizing:border-box}
+.card{background:var(--card);border-radius:20px;padding:24px;max-width:380px;width:100%;text-align:center}
+h1{font-size:20px;margin:8px 0}
+p{color:var(--muted);line-height:1.5;font-size:15px}
+code{display:block;color:var(--amb);word-break:break-all;margin:12px 0;font-size:13px}
+a.btn{display:block;text-decoration:none;border-radius:14px;padding:14px;margin-top:10px;font-weight:800}
+a.primary{background:var(--amb);color:var(--ink)}
+a.ghost{background:#26231f;color:var(--text)}
+img{width:72px;height:72px;border-radius:16px}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1 id="t">Vintage camera</h1>
+  <p id="d">Open this camera setup in Vintage. If Vintage isn't installed yet, get it from the store and open this link again — or paste the code in My cameras → Add from a code.</p>
+  <code id="c"></code>
+  <a class="btn primary" id="open" href="#">Open in Vintage</a>
+  <a class="btn ghost" href="https://apps.apple.com/app/id6816281510">App Store</a>
+  <a class="btn ghost" href="https://play.google.com/store/apps/details?id=com.vismstudio.vintage">Google Play</a>
+</div>
+<script>
+// 코드는 # 뒤에 있다(서버로 가지 않는 부분). 이 페이지는 코드를 앱 링크로 넘기기만 하고 아무것도 저장·전송하지 않는다.
+var code = (location.hash || '').slice(1); // 이름 부분은 이미 퍼센트 인코딩 — 풀지 않고 그대로 넘긴다
+if (!/^[a-z0-9-]+~[0-9a-z-]+~[a-z0-9-]+~/i.test(code)) code = '';
+document.getElementById('c').textContent = code;
+var open = document.getElementById('open');
+if (code) { open.href = 'vintage://cam/' + code; }
+else { open.style.display = 'none'; }
+if ((navigator.language || '').toLowerCase().indexOf('ko') === 0) {
+  document.getElementById('t').textContent = 'Vintage 카메라';
+  document.getElementById('d').textContent = '이 카메라 조합을 Vintage에서 열어요. 아직 앱이 없으면 스토어에서 받은 뒤 이 링크를 다시 열거나, 내 카메라 → 코드로 추가에 코드를 붙여 넣으세요.';
+  open.textContent = 'Vintage에서 열기';
+}
+</script>
+</body>
+</html>
