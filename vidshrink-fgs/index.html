@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Video Compressor Background Compression</title>
+<style>body{font-family:-apple-system,system-ui,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6;color:#222}video{width:100%;max-width:360px;border:1px solid #ddd;border-radius:8px}</style></head>
+<body>
+<h1>Video Compressor: background compression</h1>
+<p>The user picks a video, chooses compression settings and taps Compress. The app transcodes the video on the device (decode, re-encode at a smaller size, write a new MP4). This job is started by the user and the user expects it to finish, so it runs in a foreground service with a "Video compression" notification. The user can leave the app while the video is being processed; the notification shows that processing continues and when it is complete. Opening the app shows the result. The service stops as soon as the job finishes or the user cancels it.</p>
+<p>Foreground service types: mediaProcessing (Android 15 and later) and dataSync (Android 14 and earlier, where mediaProcessing is not available). Both are used only for this on-device media transcoding.</p>
+<video src="media-transcoding.mp4" controls playsinline></video>
+<p><a href="media-transcoding.mp4">media-transcoding.mp4</a></p>
+</body></html>
