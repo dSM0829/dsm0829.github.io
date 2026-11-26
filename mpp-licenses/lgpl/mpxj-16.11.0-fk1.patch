@@ -1,0 +1,22 @@
+--- mpxj-src/src/org/mpxj/common/UnmarshalHelper.java	2026-10-23 13:42:04
++++ patch/org/mpxj/common/UnmarshalHelper.java	2026-11-15 02:24:59
+@@ -103,7 +103,18 @@
+     */
+    public static final XMLReader createXmlReader() throws SAXException, ParserConfigurationException
+    {
+-      SAXParserFactory factory = SAXParserFactory.newInstance();
++      // fk patch(2026-11-15): Android's SAXParserFactory.newInstance() always returns the platform
++      // parser, which rejects the disallow-doctype-decl feature. Prefer Xerces when it is bundled.
++      SAXParserFactory factory;
++      try
++      {
++         factory = SAXParserFactory.newInstance("org.apache.xerces.jaxp.SAXParserFactoryImpl", UnmarshalHelper.class.getClassLoader());
++      }
++
++      catch (Throwable ex)
++      {
++         factory = SAXParserFactory.newInstance();
++      }
+       factory.setFeature(DISALLOW_DOCTYPE_DECL, true);
+       factory.setNamespaceAware(true);
+       XMLReader reader = factory.newSAXParser().getXMLReader();

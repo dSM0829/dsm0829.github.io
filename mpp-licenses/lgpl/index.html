@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MPP Viewer: MPXJ source and relinking</title>
+<style>body{font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;max-width:760px;margin:32px auto;padding:0 16px;color:#241D2A}h1{font-size:24px}h2{font-size:18px;margin-top:28px}code,pre{background:#f1eef4;border-radius:6px}code{padding:1px 5px}pre{padding:12px;overflow:auto}a{color:#70418C}</style>
+</head><body>
+<h1>MPP Viewer: MPXJ source code and relinking</h1>
+<p>MPP Viewer (Android, <code>com.vismstudio.mpp</code>) reads schedule files with the <a href="https://www.mpxj.org">MPXJ</a> library, Copyright Packwood Software and contributors, licensed under the GNU Lesser General Public License, version 2.1 or (at your option) any later version. This page gives you the library source, our change to it, and a way to replace the library inside the app with your own build, as section 6 of the license provides.</p>
+<p>App version 1.0.0 uses MPXJ 16.11.0 with one modification (called <code>mpxj-16.11.0-fk1</code>, made 2026-11-15).</p>
+
+<h2 id="files">Files</h2>
+<ul>
+<li><a href="LGPL-2.1.txt">LGPL-2.1.txt</a>: the license text.</li>
+<li><a href="mpxj-16.11.0-sources.jar">mpxj-16.11.0-sources.jar</a>: the unmodified MPXJ 16.11.0 source, as published on Maven Central.</li>
+<li><a href="mpxj-16.11.0-fk1.patch">mpxj-16.11.0-fk1.patch</a>: our modification. One method in <code>org/mpxj/common/UnmarshalHelper.java</code>: on Android the XML reader is created from the bundled Xerces parser when it is present, because the platform parser rejects a feature that MPXJ sets.</li>
+<li><a href="mpxj-16.11.0-fk1.jar">mpxj-16.11.0-fk1.jar</a>: the modified library as shipped in the app.</li>
+<li><a href="make-patched-jar.sh">make-patched-jar.sh</a>: builds that jar from the unmodified jar, the source jar and the patch.</li>
+<li><a href="relink.sh">relink.sh</a>: replaces MPXJ inside an MPP Viewer APK with your jar and signs the result with your key.</li>
+</ul>
+
+<h2>Build the modified library</h2>
+<pre>./make-patched-jar.sh mpxj-16.11.0.jar mpxj-16.11.0-sources.jar mpxj-16.11.0-fk1.patch my-mpxj.jar</pre>
+<p>Needs a JDK 17 or later. Get <code>mpxj-16.11.0.jar</code> from Maven Central (<code>net.sf.mpxj:mpxj:16.11.0</code>). To compile the patched class, pass the two jars it refers to: <code>CP=xercesImpl-2.12.2.jar:jakarta.xml.bind-api-3.0.1.jar</code>.</p>
+
+<h2 id="relink">Relink the app with your library</h2>
+<pre>./relink.sh MPPViewer.apk my-mpxj.jar my-keystore.jks my-alias MPPViewer-relinked.apk</pre>
+<p>Needs Java 17 or later, apktool 2.9 or later, <code>zip</code>/<code>unzip</code> and the Android SDK build-tools (<code>d8</code>, <code>zipalign</code>, <code>apksigner</code>). The app ships the <code>org.mpxj</code> classes unshrunk and with their original names, and the libraries MPXJ calls (Apache POI, RTF Parser Kit and the others listed on the licenses page) keep their original class names too, so your build only has to keep the public API that the app calls. The script replaces only the code; resources and native libraries stay as they are. Get the APK from your own device (for example <code>adb shell pm path com.vismstudio.mpp</code>, then <code>adb pull</code>; if the app is installed as split APKs, relink the base APK and install it together with the other splits re-signed by the same key).</p>
+<p>The relinked APK is signed with your key, not ours. Android will not install it over the store version: uninstall that first. Copies kept in the app's library are removed with it; your original files are not touched. Purchases made through Google Play are not recognised by an APK that Google Play did not deliver.</p>
+
+<h2>Other libraries</h2>
+<p>The full list of open source components and their license texts is on the <a href="../">licenses page</a>. No component is under the GPL.</p>
+<p>Questions: <a href="mailto:tmdals999@gmail.com">tmdals999@gmail.com</a></p>
+</body></html>
